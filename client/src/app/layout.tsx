@@ -4,6 +4,8 @@ import "./globals.css";
 import Link from "next/link";
 import Page from './page'
 import Reg from '../app/register/Registration'
+import Auth from '../app/register/Authorization'
+import Habits from '../app/habits/habits'
 import styles from "./layout.module.css";
 
 const geistSans = Geist({
@@ -49,7 +51,12 @@ export default function RootLayout({
           </nav>
         </header>
 
-        <main><Reg/></main>
+        <main>
+          <Reg/>
+          <Auth/>
+          <Habits/>
+        </main>
+
 
         <footer>
           <p>© 2024 НовыйЯ. Все права защищены.</p>

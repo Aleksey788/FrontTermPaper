@@ -15,22 +15,36 @@ const FormRegistr = () => {
             [e.target.name]: e.target.value
         })}
 
-   const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        await axios.post('https://localhost:7239/register', {
-            ...form, 
-            Email: (form.Email),
-            Password: (form.Password)
-        })
-        alert("Регистрация успешна!")
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+        const response = await axios.post(
+            "https://localhost:7239/register",
+            {
+                Email: form.Email,
+                Password: form.Password,
+            }
+        );
+
+        alert(response.data.message ?? "Регистрация успешна!");
+
         setForm({
-          Email: "",
-          Password: ""
-        })
+            Email: "",
+            Password: "",
+        });
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            alert(error.response?.data.message ?? "Ошибка соединения с сервером");
+        } else {
+            alert("Неизвестная ошибка");
         }
+    }
+};
 
     return (
       <div>
+        <h1>Страница регистрации</h1>
         <form onSubmit={handleSubmit} className='inputs'>
           <input type="Email" onChange={handleChange} value={form.Email} placeholder='Почта' name="Email"/>
           <input type="Password" onChange={handleChange} value={form.Password} placeholder='Пароль' name="Password"/>
