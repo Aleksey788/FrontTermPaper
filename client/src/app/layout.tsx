@@ -3,10 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Page from './page'
-import Reg from '../app/register/Registration'
-import Auth from '../app/register/Authorization'
-import Habits from '../app/habits/habits'
+import Reg from './register/page'
+// import Auth from '../app/register/Authorization'
+import Habits from './habits/page'
 import styles from "./layout.module.css";
+// import { Router } from "next/router";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <header>
+        <header className={styles.header}>
 
           <div className={styles.logo}>
             <img src="/globe.svg" alt="Logo" width={100} height={100} />
@@ -46,22 +47,20 @@ export default function RootLayout({
             <Link href="/">Главная</Link>
             <Link href="/about">О нас</Link>
             <Link href="/contact">Контакты</Link>
-            <Link href="/login">Привычки</Link>
             <Link href="/register">Регистрация</Link>
+            <Link href="/authoriz">Авторизация</Link>
+            <Link href="/habits">Привычки</Link>
           </nav>
         </header>
 
         <main>
-          <Reg/>
-          <Auth/>
-          <Habits/>
+          {children}
         </main>
 
-
-        <footer>
+          <footer>
           <p>© 2024 НовыйЯ. Все права защищены.</p>
         </footer>
-      </body>
+        </body>
     </html>
   );
 }
