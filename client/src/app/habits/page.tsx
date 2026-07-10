@@ -2,10 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
+import style from './page.module.css'
 
 interface Habit {
     id: number;
     name: string;
+    slug: string;
 }
 
 export default function Habits() {
@@ -16,7 +19,7 @@ export default function Habits() {
         const loadHabits = async () => {
             try 
             {
-                const response = await axios.get("https://localhost:7239/habits");
+                const response = await axios.get("https://localhost:7239/habits/");
 
                 console.log(response.data);
                 setHabits(response.data);
@@ -36,11 +39,16 @@ export default function Habits() {
     return (
         <div>
             <h1>Список привычек</h1>
-            {habits.map(habit => (
-                <div key={habit.id}>
-                    {habit.name}
-                </div>
-            ))}
+{habits.map((habit) => {
+    const slug = habit.slug
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+
+    return (
+        <Link key={habit.id} href={`/habits/${slug}`} className={style.habitLink}>
+            {habit.name}
+        </Link>
+    );})}
         </div>
     );
 }
