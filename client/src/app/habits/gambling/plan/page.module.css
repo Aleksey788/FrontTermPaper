@@ -1,0 +1,46 @@
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 900px;
+  display: flex;
+  height: 400px;
+  gap: 24px;
+}
+
+.card {
+  width: 100%;
+  min-height: 140px;
+
+  padding: 28px 32px;
+  border: none;
+  border-radius: 20px;
+
+  background: white;
+  cursor: pointer;
+  text-align: left;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 1.5;
+}
