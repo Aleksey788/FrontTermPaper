@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const plans = [
@@ -15,15 +16,16 @@ const plans = [
   },
 ];
 
+
 export default function PlansPage() {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
         {plans.map((plan) => (
-          <button key={plan.days} className={styles.card}>
-            <h2 className={styles.title}>{plan.days} дней</h2>
-            <p className={styles.description}>{plan.description}</p>
-          </button>
+          <Link href={`/habits/gaming/plan/plan${plan.days}`} key={plan.days} className={styles.card}>
+              <h2 className={styles.title}>{plan.days} дней</h2>
+              <p className={styles.description}>{plan.description}</p>
+          </Link>
         ))}
       </div>
     </main>
