@@ -7,14 +7,14 @@
 }
 
 .container {
-  max-width: 900px;
+
   display: flex;
   height: 400px;
   gap: 24px;
 }
 
 .card {
-  width: 100%;
+  width: 200px;
   min-height: 140px;
 
   padding: 28px 32px;
