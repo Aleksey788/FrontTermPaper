@@ -1,37 +1,48 @@
+"use client";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const plans = [
-  {
-    days: 7,
-    description: "Быстрый старт и первые результаты за неделю.",
-  },
-  {
-    days: 14,
-    description: "Закрепление привычек и постепенное увеличение нагрузки.",
-  },
-  {
-    days: 30,
-    description: "Полный курс для достижения стабильного результата.",
-  },
-  {
-    days: "Individual",
-    description: "Создай свой индивидуальный план, учитывая свои особенности и цели",
-  }
-];
 
+interface PlanDay {
+  id: number;
+  countDay: string;
+  description: string;
+}
 
 export default function PlansPage() {
+  const [days, setDays] = useState<PlanDay[]>([]);
+
+  useEffect(() => {
+    const loadDays = async () => {
+      try
+      {
+        const response = await axios.get("https://localhost:7239/planDay");
+        
+        console.log(response.data);
+        setDays(response.data);
+
+      }
+      catch(error)
+      {
+        console.error(error);
+      }
+    };
+    loadDays();
+  }, [])
+
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        {plans.map((plan) => (
-          <Link href={`/habits/gaming/plan/plan${plan.days}`} key={plan.days} className={styles.card}>
-              <h2 className={styles.title}>{plan.days} дней</h2>
+        {days.map((plan) => (
+          <Link href={`/habits/smoking/plan/plan${plan.countDay}`} key={plan.id} className={styles.card}>
+              <h2 className={styles.title}>{plan.countDay} дней</h2>
               <p className={styles.description}>{plan.description}</p>
           </Link>
         ))}
       </div>
     </main>
   );
+
 }

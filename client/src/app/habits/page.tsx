@@ -24,7 +24,6 @@ export default function Habits() {
                 console.log(response.data);
                 setHabits(response.data);
                 
-                setHabits(response.data);
             } 
             catch (error) 
             {
