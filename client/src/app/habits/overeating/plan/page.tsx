@@ -36,7 +36,7 @@ export default function PlansPage() {
     <main className={styles.page}>
       <div className={styles.container}>
         {days.map((plan) => (
-          <Link href={`/habits/smoking/plan/plan${plan.countDay}`} key={plan.id} className={styles.card}>
+          <Link href={`/habits/overeating/plan/plan${plan.countDay}`} key={plan.id} className={styles.card}>
               <h2 className={styles.title}>{plan.countDay} дней</h2>
               <p className={styles.description}>{plan.description}</p>
           </Link>
