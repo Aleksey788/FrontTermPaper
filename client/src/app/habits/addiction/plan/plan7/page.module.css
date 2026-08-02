@@ -1,11 +1,71 @@
-.days{
+.days {
     display: flex;
     flex-wrap: wrap;
-    
+    gap: 20px;
 }
 
-.day{
+.day {
     border: 1px solid #ccc;
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 20px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.day button {
+    margin-top: 10px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal {
+    width: 450px;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal textarea {
+    min-height: 120px;
+    resize: none;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.stars {
+    display: flex;
+    gap: 8px;
+    font-size: 35px;
+}
+
+.star {
+    color: gray;
+    cursor: pointer;
+}
+
+.activeStar {
+    color: gold;
+    cursor: pointer;
 }
