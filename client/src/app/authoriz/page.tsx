@@ -27,6 +27,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             }
         );
 
+        if (response.data.userId != null) {
+            localStorage.setItem("userId", String(response.data.userId));
+        }
+
         alert(response.data.message ?? "Авторизация успешна!");
 
         setForm({

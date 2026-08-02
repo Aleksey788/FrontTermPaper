@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useEffect, useState } from 'react'
 import style from './page.module.css'
 import axios from 'axios';
@@ -10,7 +10,8 @@ interface Plan7 {
   description: string,
   habitNameId: number,
   planDayId: number,
-  check: boolean
+  check: boolean,
+  canCheck: boolean
 }
 
 export default function Page() {
@@ -20,7 +21,12 @@ export default function Page() {
     const loadDays = async () => {
       try
       {
-        const response = await axios.get("https://localhost:7239/habits/gambling/plan/plan30");
+        const response = await axios.get("https://localhost:7239/habits/gambling/plan/plan30", {
+          params: (() => {
+            const userId = localStorage.getItem("userId");
+            return userId ? { userId: Number(userId) } : {};
+          })()
+        });
 
         console.log(response.data)
         setDays(response.data)
@@ -44,8 +50,8 @@ export default function Page() {
                 <summary>Подробнее</summary>
                 <p>{item.description}</p>
               </details>
-              <input type="checkbox" id="agree" name="agree" />
-              <label htmlFor="agree">Выполнил(а) задание</label>
+              <input type="checkbox" id={`agree-${item.id}`} name="agree" disabled={!item.canCheck} />
+              <label htmlFor={`agree-${item.id}`}>Выполнил(а) задание{!item.canCheck && " (ещё недоступно)"}</label>
             </div>
           ))}
         </section>
