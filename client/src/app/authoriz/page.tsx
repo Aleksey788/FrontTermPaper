@@ -6,7 +6,7 @@ import axios from "axios";
 const FormAuthorization = () => {
   const [form, setForm] = useState({
     Email: "",
-    Password: ""
+    HashPassword: ""
   })
 
 const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +23,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             "https://localhost:7239/authoriz",
             {
                 Email: form.Email,
-                Password: form.Password,
+                Password: form.HashPassword,
             }
         );
 
@@ -35,7 +35,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
         setForm({
             Email: "",
-            Password: "",
+            HashPassword: "",
         });
     } 
     catch (error) 
@@ -52,7 +52,7 @@ return (
         <h1>Страница авторизации</h1>
         <form onSubmit={handleSubmit} className='inputs'>
           <input type="Email" onChange={handleChange} value={form.Email} placeholder='Почта' name="Email"/>
-          <input type="Password" onChange={handleChange} value={form.Password} placeholder='Пароль' name="Password"/>
+          <input type="Password" onChange={handleChange} value={form.HashPassword} placeholder='Пароль' name="HashPassword"/>
           <button type='submit'>Отправить</button>
         </form>
     </div>
