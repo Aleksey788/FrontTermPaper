@@ -3,55 +3,64 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const FormRegistr = () => {
-  const [form, setForm] = useState({
-    Email: "",
-    HashPassword: ""
-  })
+const API = "https://localhost:7239";
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        })}
+const FormRegistr = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-        const response = await axios.post(
-            "https://localhost:7239/register",
-            {
-                Email: form.Email,
-                Password: form.HashPassword,
-            }
-        );
+      const response = await axios.post(`${API}/register`, {
+        Email: email,
+        Password: password,
+      });
 
-        alert(response.data.message ?? "Регистрация успешна!");
-
-        setForm({
-            Email: "",
-            HashPassword: "",
-        });
+      alert(response.data.message ?? "Регистрация успешна!");
+      setEmail("");
+      setPassword("");
     } catch (error) {
-        if (axios.isAxiosError(error)) {
-            alert(error.response?.data.message ?? "Ошибка соединения с сервером");
-        } else {
-            alert("Неизвестная ошибка");
-        }
+      if (axios.isAxiosError(error)) {
+        alert(error.response?.data?.message ?? "Ошибка соединения с сервером");
+      } else {
+        alert("Неизвестная ошибка");
+      }
+    } finally {
+      setLoading(false);
     }
-};
+  };
 
-    return (
-      <div>
-        <h1>Страница регистрации</h1>
-        <form onSubmit={handleSubmit} className='inputs'>
-          <input type="Email" onChange={handleChange} value={form.Email} placeholder='Почта' name="Email"/>
-          <input type="Password" onChange={handleChange} value={form.HashPassword} placeholder='Пароль' name="HashPassword"/>
-          <button type='submit'>Отправить</button>
-        </form>
-      </div>
-    )
-}
+  return (
+    <div>
+      <h1>Страница регистрации</h1>
+      <form onSubmit={handleSubmit} className="inputs">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Почта"
+          name="Email"
+          required
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Пароль"
+          name="Password"
+          required
+          minLength={6}
+        />
+        <button type="submit" disabled={loading}>
+          {loading ? "Отправка..." : "Зарегистрироваться"}
+        </button>
+      </form>
+    </div>
+  );
+};
 
 export default FormRegistr;
