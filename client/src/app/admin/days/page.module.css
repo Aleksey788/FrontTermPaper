@@ -1,0 +1,64 @@
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.choices label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.choices select,
+.editBlock select,
+.editForm input,
+.editForm textarea {
+  min-width: 220px;
+  padding: 8px;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.day {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.editBlock {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.editBlock label,
+.editForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.editForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
