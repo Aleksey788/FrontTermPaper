@@ -45,7 +45,7 @@ export default function RootLayout({
           
           <nav className={styles.nav}>
             <Link href="/">Главная</Link>
-            <Link href="/about">О нас</Link>
+            {/* <Link href="/about">О нас</Link> */}
             <Link href="/contact">Контакты</Link>
             <Link href="/register">Регистрация</Link>
             <Link href="/authoriz">Авторизация</Link>
