@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import style from "./page.module.css";
 import axios from "axios";
 import { Plan7 } from "@/domain/interface";
+import { apiService } from "@/service/ApiService";
 
 
 export default function Page() {
@@ -21,12 +22,11 @@ export default function Page() {
   const loadDays = async () => {
     try {
       const userId = localStorage.getItem("userId");
-      const response = await axios.get(
-        "https://localhost:7239/habits/addiction/plan/plan7",
-        {
-          params: userId ? { userId: Number(userId) } : {},
+      const response = await apiService.apiClient.get<Plan7[]>('/habits/addiction/plan/plan7', {
+        params:{
+          userId: userId,
         }
-      );
+      });
 
       console.log(response.data);
       setDays(response.data);
