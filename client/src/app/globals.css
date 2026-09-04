@@ -1,4 +1,214 @@
-*{
-    background: grey;
-    text-decoration: none;
+:root {
+  --color-bg-dark: #121212;
+  --color-bg-card: #1e1e1e;
+  --color-bg-light: #f7f7f7;
+  --color-bg-white: #ffffff;
+  --color-green: #2d6a4f;
+  --color-green-light: #40916c;
+  --color-green-bright: #52b788;
+  --color-green-dark: #1b4332;
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --color-text-dark: #333333;
+  --color-text-secondary: #666666;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-light: #e0e0e0;
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.25);
+  --transition: 0.25s ease;
+  --font-family: var(--font-geist-sans), "Segoe UI", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg-dark);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.btnPrimary {
+  background: var(--color-green-light);
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: var(--color-green-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(64, 145, 108, 0.4);
+}
+
+.btnSecondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.btnDark {
+  background: #333;
+  color: white;
+}
+
+.btnDark:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
+/* Forms */
+.formCard {
+  max-width: 440px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.formCard h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: var(--color-green-bright);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputs input {
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color var(--transition);
+}
+
+.inputs input:focus {
+  outline: none;
+  border-color: var(--color-green-light);
+}
+
+.inputs input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.inputs button {
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--color-green-light);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.inputs button:hover:not(:disabled) {
+  background: var(--color-green-bright);
+  transform: translateY(-1px);
+}
+
+.inputs button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inputs p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+/* Habit landing pages */
+.habitLanding {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 48px;
+  text-align: center;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.habitLanding h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: var(--color-green-bright);
+}
+
+.habitLanding a {
+  display: inline-flex;
+  margin-top: 24px;
+  padding: 14px 32px;
+  background: var(--color-green-light);
+  color: white;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.habitLanding a:hover {
+  background: var(--color-green-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(64, 145, 108, 0.4);
 }

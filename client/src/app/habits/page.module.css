@@ -1,5 +1,55 @@
-.habitLink{
-    display: block;
-    padding: 10px;
-    color: white;
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-green-bright);
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.habitLink {
+  display: block;
+  padding: 24px 28px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.habitLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-green-dark), var(--color-green-bright));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.habitLink:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-green-light);
+  color: var(--color-green-bright);
+}
+
+.habitLink:hover::before {
+  opacity: 1;
 }

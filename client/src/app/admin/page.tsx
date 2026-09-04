@@ -1,24 +1,15 @@
-import React from 'react'
+import React from "react";
+import AdminLayout from "@/components/AdminLayout";
 
 const page = () => {
   return (
-    <div>
-        <h1>Админ панель</h1>
+    <AdminLayout>
+      <h1>Админ-панель</h1>
+      <p style={{ color: "var(--color-text-muted)" }}>
+        Выберите раздел в меню слева для управления сайтом.
+      </p>
+    </AdminLayout>
+  );
+};
 
-        <div>
-            <aside>
-                <nav>
-                    <ul>
-                        <li><a href="/admin/statistics">Статистика</a></li>
-                        <li><a href='/admin/days'>дни</a></li>
-                        <li><a href="/admin/homepage">Главня</a></li>
-                        <li><a href="/admin/contacts">Контакты</a></li>
-                    </ul>
-                </nav>
-            </aside>
-        </div>
-    </div>
-  )
-}
-
-export default page
+export default page;

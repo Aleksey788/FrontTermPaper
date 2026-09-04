@@ -35,8 +35,8 @@ const FormRegistr = () => {
   };
 
   return (
-    <div>
-      <h1>Страница регистрации</h1>
+    <div className="formCard">
+      <h1>Регистрация</h1>
       <form onSubmit={handleSubmit} className="inputs">
         <input
           type="email"

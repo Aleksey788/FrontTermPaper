@@ -2,17 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import style from './page.module.css'
 import axios from 'axios';
+import { Plan30 } from '@/domain/interface';
 
-
-interface Plan30 {
-  id: number,
-  number: number,
-  description: string,
-  habitNameId: number,
-  planDayId: number,
-  check: boolean,
-  canCheck: boolean
-}
 
 export default function Page() {
   const [days, setDays] = useState<Plan30[]>([]);

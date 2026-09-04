@@ -1,0 +1,248 @@
+.page {
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  align-items: center;
+  gap: 48px;
+  padding: 60px 48px;
+  background:
+    linear-gradient(135deg, rgba(18, 18, 18, 0.92) 0%, rgba(27, 67, 50, 0.7) 100%),
+    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80") center/cover no-repeat;
+}
+
+.heroContent {
+  max-width: 620px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(82, 183, 136, 0.15);
+  border: 1px solid rgba(82, 183, 136, 0.3);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  color: var(--color-green-bright);
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.heroTitle span {
+  color: var(--color-green-bright);
+}
+
+.heroText {
+  font-size: 17px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dashboard {
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.progressSection h3 {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.progressBar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progressFill {
+  height: 100%;
+  width: 68%;
+  background: linear-gradient(90deg, var(--color-green-dark), var(--color-green-bright));
+  border-radius: var(--radius-pill);
+}
+
+.progressPercent {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-green-bright);
+}
+
+.progressMotivation {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.goalSection {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+}
+
+.goalSection h4 {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.goalSection p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.goalDay {
+  font-size: 13px;
+  color: var(--color-green-bright);
+  margin-top: 4px;
+}
+
+.achievements h4 {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+}
+
+.badgeItem {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.badgeActive {
+  background: var(--color-green-light);
+}
+
+.badgeBlue {
+  background: #3b82f6;
+}
+
+.badgePurple {
+  background: #8b5cf6;
+}
+
+.badgeLocked {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.dashboardBtn {
+  margin-top: 4px;
+}
+
+.features {
+  background: var(--color-bg-light);
+  padding: 80px 48px;
+}
+
+.featuresTitle {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 48px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background: white;
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  border: 1px solid var(--color-border-light);
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-green-light);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(45, 106, 79, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.featureCard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+}
+
+.featureCard p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+    min-height: auto;
+  }
+
+  .dashboard {
+    max-width: 400px;
+  }
+
+  .features {
+    padding: 60px 24px;
+  }
+}

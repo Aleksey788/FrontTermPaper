@@ -71,8 +71,8 @@ const FormAuthorization = () => {
   };
 
   return (
-    <div>
-      <h1>Страница авторизации</h1>
+    <div className="formCard">
+      <h1>Авторизация</h1>
 
       {step === "form" ? (
         <form onSubmit={handleLoginStart} className="inputs">

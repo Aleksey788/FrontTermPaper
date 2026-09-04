@@ -3,13 +3,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-
-interface PlanDay {
-  id: number;
-  countDay: string;
-  description: string;
-}
+import { PlanDay } from "@/domain/interface";
 
 export default function PlansPage() {
   const [days, setDays] = useState<PlanDay[]>([]);

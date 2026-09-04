@@ -4,12 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import style from './page.module.css'
-
-interface Habit {
-    id: number;
-    name: string;
-    slug: string;
-}
+import { Habit } from "@/domain/interface";
 
 export default function Habits() {
     const [habits, setHabits] = useState<Habit[]>([]);
@@ -36,8 +31,9 @@ export default function Habits() {
     []);
 
     return (
-        <div>
+        <div className={style.page}>
             <h1>Список привычек</h1>
+            <div className={style.grid}>
 {habits.map((habit) => {
     const slug = habit.slug
         .toLowerCase()
@@ -48,6 +44,7 @@ export default function Habits() {
             {habit.name}
         </Link>
     );})}
+            </div>
         </div>
     );
 }

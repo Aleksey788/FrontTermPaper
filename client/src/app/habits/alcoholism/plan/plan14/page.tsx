@@ -2,20 +2,10 @@
 import React, { useEffect, useState } from 'react'
 import style from './page.module.css'
 import axios from 'axios';
-
-
-interface Plan7 {
-  id: number,
-  number: number,
-  description: string,
-  habitNameId: number,
-  planDayId: number,
-  check: boolean,
-  canCheck: boolean
-}
+import { Plan14 } from '@/domain/interface';
 
 export default function Page() {
-  const [days, setDays] = useState<Plan7[]>([]);
+  const [days, setDays] = useState<Plan14[]>([]);
 
   useEffect(() => {
     const loadDays = async () => {

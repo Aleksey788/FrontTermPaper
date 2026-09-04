@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import style from "./page.module.css";
+import AdminLayout from "@/components/AdminLayout";
+import style from "@/styles/admin.module.css";
 
 const API = "https://localhost:7239";
 
@@ -162,7 +163,7 @@ const Page = () => {
   };
 
   return (
-    <div>
+    <AdminLayout>
       <h1>Страница редактирования дней</h1>
 
       <div className={style.choices}>
@@ -271,7 +272,7 @@ const Page = () => {
           </div>
         </>
       )}
-    </div>
+    </AdminLayout>
   );
 };
 
