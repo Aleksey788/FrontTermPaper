@@ -1,8 +1,8 @@
 ﻿"use client";
 import React, { useEffect, useState } from 'react'
 import style from './page.module.css'
-import axios from 'axios';
 import { Plan7 } from '@/domain/interface';
+import { apiService } from '@/service/ApiService';
 
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
     const loadDays = async () => {
       try
       {
-        const response = await axios.get("https://localhost:7239/habits/overeating/plan/plan7", {
+        const response = await apiService.apiClient.get("/habits/overeating/plan/plan7", {
           params: (() => {
             const userId = localStorage.getItem("userId");
             return userId ? { userId: Number(userId) } : {};

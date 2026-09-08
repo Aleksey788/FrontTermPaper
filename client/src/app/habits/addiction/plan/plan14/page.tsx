@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import style from './page.module.css'
 import axios from 'axios';
 import { Plan14 } from '@/domain/interface';
+import { apiService } from '@/service/ApiService';
 
 
 export default function Page() {
@@ -12,7 +13,7 @@ export default function Page() {
     const loadDays = async () => {
       try
       {
-        const response = await axios.get("https://localhost:7239/habits/addiction/plan/plan14", {
+        const response = await apiService.apiClient.get("/habits/addiction/plan/plan14", {
           params: (() => {
             const userId = localStorage.getItem("userId");
             return userId ? { userId: Number(userId) } : {};

@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import { apiService } from "@/service/ApiService";
 
-const API = "https://localhost:7239";
 
 type Step = "form" | "code";
 
@@ -28,7 +28,7 @@ const FormAuthorization = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${API}/authoriz`, {
+      const response = await apiService.apiClient.post('/authoriz', {
         Email: email,
         Password: password,
       });
@@ -49,7 +49,7 @@ const FormAuthorization = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${API}/authoriz/confirm`, {
+      const response = await apiService.apiClient.post('/authoriz/confirm', {
         Email: email,
         Code: code,
       });

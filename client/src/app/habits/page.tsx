@@ -5,6 +5,7 @@ import axios from "axios";
 import Link from "next/link";
 import style from './page.module.css'
 import { Habit } from "@/domain/interface";
+import { apiService } from "@/service/ApiService";
 
 export default function Habits() {
     const [habits, setHabits] = useState<Habit[]>([]);
@@ -14,7 +15,7 @@ export default function Habits() {
         const loadHabits = async () => {
             try 
             {
-                const response = await axios.get("https://localhost:7239/habits/");
+                const response = await apiService.apiClient.get("/habits/");
 
                 console.log(response.data);
                 setHabits(response.data);

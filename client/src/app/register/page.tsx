@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import { apiService } from "@/service/ApiService";
 
-const API = "https://localhost:7239";
 
 const FormRegistr = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +15,7 @@ const FormRegistr = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${API}/register`, {
+      const response = await apiService.apiClient.post('/register', {
         Email: email,
         Password: password,
       });

@@ -2,8 +2,8 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { PlanDay } from "@/domain/interface";
+import { apiService } from "@/service/ApiService";
 
 export default function PlansPage() {
   const [days, setDays] = useState<PlanDay[]>([]);
@@ -12,7 +12,7 @@ export default function PlansPage() {
     const loadDays = async () => {
       try
       {
-        const response = await axios.get("https://localhost:7239/planDay");
+        const response = await apiService.apiClient.get("/planDay");
         
         console.log(response.data);
         setDays(response.data);

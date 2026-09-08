@@ -4,20 +4,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AdminLayout from "@/components/AdminLayout";
 import style from "@/styles/admin.module.css";
+import { Habit, PlanDay } from "@/domain/interface";
+import { apiService } from "@/service/ApiService";
 
-const API = "https://localhost:7239";
 
-interface Habit {
-  id: number;
-  name: string;
-  slug: string;
-}
-
-interface PlanDay {
-  id: number;
-  countDay: string;
-  description: string;
-}
 
 interface DayItem {
   id: number;
@@ -48,8 +38,8 @@ const Page = () => {
     const loadFilters = async () => {
       try {
         const [habitsRes, plansRes] = await Promise.all([
-          axios.get(`${API}/habits`),
-          axios.get(`${API}/planDay`),
+          apiService.apiClient.get('/habits'),
+          apiService.apiClient.get('/planDay'),
         ]);
         setHabits(habitsRes.data);
         setPlans(plansRes.data);
@@ -85,7 +75,7 @@ const Page = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`${API}/admin/days`, {
+      const response = await apiService.apiClient.get('/admin/days', {
         params: {
           habitNameId: Number(choiceHabit),
           planDayId: Number(choicePlan),
@@ -129,7 +119,7 @@ const Page = () => {
 
     setSaving(true);
     try {
-      const response = await axios.put(`${API}/admin/days/${editDayId}`, {
+      const response = await apiService.apiClient.put('/admin/days/${editDayId}', {
         Number: number,
         Description: editDescription.trim(),
       });

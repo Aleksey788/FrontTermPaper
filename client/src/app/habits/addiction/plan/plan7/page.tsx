@@ -65,7 +65,7 @@ export default function Page() {
     }
 
     try {
-      const response = await axios.post("https://localhost:7239/startPlan", {
+      const response = await axios.post("/startPlan", {
         userId: Number(userId),
         habitNameId: days[0].habitNameId,
         planDayId: days[0].planDayId,
