@@ -52,21 +52,6 @@ const Page = () => {
     loadFilters();
   }, []);
 
-  // При выборе дня в нижнем фильтре — подставляем данные в поля
-  useEffect(() => {
-    if (!editDayId) {
-      setEditNumber("");
-      setEditDescription("");
-      return;
-    }
-
-    const day = days.find((d) => d.id === Number(editDayId));
-    if (!day) return;
-
-    setEditNumber(String(day.number));
-    setEditDescription(day.description ?? "");
-  }, [editDayId, days]);
-
   const handleSubmit = async () => {
     if (!choiceHabit || !choicePlan) {
       alert("Пожалуйста, выберите привычку и план");
@@ -119,7 +104,7 @@ const Page = () => {
 
     setSaving(true);
     try {
-      const response = await apiService.apiClient.put('/admin/days/${editDayId}', {
+      const response = await apiService.apiClient.put(`/admin/days/${editDayId}`, {
         Number: number,
         Description: editDescription.trim(),
       });
@@ -220,7 +205,13 @@ const Page = () => {
               Выберите день
               <select
                 value={editDayId}
-                onChange={(e) => setEditDayId(e.target.value)}
+                onChange={(e) => {
+                  const selectedId = e.target.value;
+                  const selectedDay = days.find((day) => day.id === Number(selectedId));
+                  setEditDayId(selectedId);
+                  setEditNumber(selectedDay ? String(selectedDay.number) : "");
+                  setEditDescription(selectedDay?.description ?? "");
+                }}
               >
                 <option value="">Выберите день</option>
                 {days.map((day) => (

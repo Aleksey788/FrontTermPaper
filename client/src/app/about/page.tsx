@@ -12,7 +12,7 @@ const page = () => {
 
                 <h1>
                     <span>Have questions?</span>
-                    Get in touch in any way that's convenient for you
+                    Get in touch in any way that&apos;s convenient for you
                 </h1>
 
                 <p className={style['working-hours']} >

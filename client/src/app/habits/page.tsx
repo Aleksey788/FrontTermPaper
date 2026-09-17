@@ -15,7 +15,7 @@ export default function Habits() {
         const loadHabits = async () => {
             try 
             {
-                const response = await apiService.apiClient.get("/habits/");
+                const response = await apiService.apiClient.get("/habits");
 
                 console.log(response.data);
                 setHabits(response.data);
