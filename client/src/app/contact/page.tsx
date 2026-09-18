@@ -43,8 +43,7 @@ const ContactPage = () => {
               <Link href="/">Главная</Link>
               <Link href="/habits">Привычки</Link>
               <Link href="/contact">Контакты</Link>
-              <Link href="/register">Регистрация</Link>
-              <Link href="/authoriz">Авторизация</Link>
+              <Link href="/login">Вход</Link>
             </nav>
           </section>
         </aside>

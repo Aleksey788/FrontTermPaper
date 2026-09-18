@@ -1,0 +1,44 @@
+.authPage {
+  position: relative;
+  isolation: isolate;
+  display: flow-root;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: var(--color-bg-dark);
+}
+
+.authPage::before {
+  content: "";
+  position: fixed;
+  inset: -10px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--auth-background-image, none);
+  background-position: center;
+  background-size: cover;
+  filter: blur(3px) brightness(0.5);
+}
+
+.quoteCard {
+  width: calc(100% - 64px);
+  max-width: 360px;
+  margin: -24px auto 48px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(30, 30, 30, 0.9);
+  box-shadow: var(--shadow-sm);
+  overflow-wrap: anywhere;
+}
+
+.quoteCard blockquote {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.quoteCard figcaption {
+  margin-top: 10px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  text-align: right;
+}

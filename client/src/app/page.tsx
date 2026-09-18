@@ -67,7 +67,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Link href="/authoriz" className={`btn btnPrimary ${styles.dashboardBtn}`}>
+          <Link href="/login" className={`btn btnPrimary ${styles.dashboardBtn}`}>
             Перейти в кабинет
           </Link>
         </aside>

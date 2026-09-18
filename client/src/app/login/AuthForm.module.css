@@ -1,0 +1,109 @@
+.card {
+  width: calc(100% - 32px);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 28px;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-dark);
+}
+
+.tabs::before {
+  content: "";
+  position: absolute;
+  inset: 4px auto 4px 4px;
+  width: calc((100% - 8px) / 2);
+  border-radius: var(--radius-pill);
+  background: var(--color-green);
+  transition: transform var(--transition);
+}
+
+.tabs[data-mode="signup"]::before {
+  transform: translateX(100%);
+}
+
+.tab {
+  position: relative;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.tab[aria-selected="true"],
+.tab:hover:not(:disabled) {
+  color: var(--color-text);
+}
+
+.tab:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.card button:focus-visible {
+  outline: 2px solid var(--color-green-bright);
+  outline-offset: 3px;
+}
+
+.panel {
+  --form-enter-x: -30px;
+  min-height: 310px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.panel[aria-labelledby="signup-tab"] {
+  --form-enter-x: 30px;
+}
+
+.panel > form {
+  animation: reveal 700ms ease-out;
+}
+
+.panel input {
+  min-width: 0;
+  width: 100%;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateX(var(--form-enter-x));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 32px auto;
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabs::before,
+  .card button {
+    transition: none;
+  }
+
+  .panel > form {
+    animation: none;
+  }
+}
