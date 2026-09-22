@@ -5,6 +5,11 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
+        <figure className={styles.heroQuote}>
+          <blockquote>«Я просто сгубил себя!»</blockquote>
+          <figcaption>— Ф. М. Достоевский</figcaption>
+        </figure>
+
         <div className={styles.heroContent}>
           <span className={styles.badge}>
             Измени привычки — измени жизнь
@@ -27,50 +32,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
-        <aside className={styles.dashboard}>
-          <h2>Панель управления</h2>
-
-          <div className={styles.progressSection}>
-            <h3>Текущий прогресс</h3>
-            <div className={styles.progressBar}>
-              <div className={styles.progressFill} />
-            </div>
-            <span className={styles.progressPercent}>68%</span>
-            <p className={styles.progressMotivation}>Ты на правильном пути!</p>
-          </div>
-
-          <div className={styles.goalSection}>
-            <h4>Текущая цель</h4>
-            <p>Избавление от курения</p>
-            <p className={styles.goalDay}>📅 День 14 из 30</p>
-          </div>
-
-          <div className={styles.achievements}>
-            <h4>Достижения 5/12</h4>
-            <div className={styles.badges}>
-              <span className={`${styles.badgeItem} ${styles.badgeActive}`}>
-                ⭐
-              </span>
-              <span className={`${styles.badgeItem} ${styles.badgeBlue}`}>
-                🔥
-              </span>
-              <span className={`${styles.badgeItem} ${styles.badgePurple}`}>
-                ⭐
-              </span>
-              <span className={`${styles.badgeItem} ${styles.badgeLocked}`}>
-                🔒
-              </span>
-              <span className={`${styles.badgeItem} ${styles.badgeLocked}`}>
-                🔒
-              </span>
-            </div>
-          </div>
-
-          <Link href="/login" className={`btn btnPrimary ${styles.dashboardBtn}`}>
-            Перейти в кабинет
-          </Link>
-        </aside>
       </section>
 
       <section className={styles.features}>

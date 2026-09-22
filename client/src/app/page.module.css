@@ -6,16 +6,46 @@
   position: relative;
   min-height: 85vh;
   display: grid;
-  grid-template-columns: 1fr 380px;
-  align-items: center;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "quote"
+    "content";
+  align-items: start;
+  row-gap: 48px;
   padding: 60px 48px;
   background:
     linear-gradient(135deg, rgba(18, 18, 18, 0.92) 0%, rgba(27, 67, 50, 0.7) 100%),
-    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80") center/cover no-repeat;
+    url("/images/home-hero-background.png") center/cover no-repeat;
+}
+
+.heroQuote {
+  grid-area: quote;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: clamp(24px, 6vw, 96px);
+  width: 100%;
+  margin: 0;
+}
+
+.heroQuote blockquote {
+  min-width: 0;
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.heroQuote figcaption {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .heroContent {
+  grid-area: content;
   max-width: 620px;
 }
 
@@ -53,121 +83,6 @@
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-}
-
-.dashboard {
-  background: rgba(30, 30, 30, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.dashboard h2 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.progressSection h3 {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  margin-bottom: 8px;
-}
-
-.progressBar {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-pill);
-  overflow: hidden;
-  margin-bottom: 8px;
-}
-
-.progressFill {
-  height: 100%;
-  width: 68%;
-  background: linear-gradient(90deg, var(--color-green-dark), var(--color-green-bright));
-  border-radius: var(--radius-pill);
-}
-
-.progressPercent {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-green-bright);
-}
-
-.progressMotivation {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  margin-top: 4px;
-}
-
-.goalSection {
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: var(--radius-md);
-}
-
-.goalSection h4 {
-  font-size: 12px;
-  color: var(--color-text-muted);
-  margin-bottom: 6px;
-}
-
-.goalSection p {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.goalDay {
-  font-size: 13px;
-  color: var(--color-green-bright);
-  margin-top: 4px;
-}
-
-.achievements h4 {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  margin-bottom: 10px;
-}
-
-.badges {
-  display: flex;
-  gap: 8px;
-}
-
-.badgeItem {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-}
-
-.badgeActive {
-  background: var(--color-green-light);
-}
-
-.badgeBlue {
-  background: #3b82f6;
-}
-
-.badgePurple {
-  background: #8b5cf6;
-}
-
-.badgeLocked {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--color-text-muted);
-  font-size: 12px;
-}
-
-.dashboardBtn {
-  margin-top: 4px;
 }
 
 .features {
@@ -234,12 +149,22 @@
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "quote"
+      "content";
+    gap: 28px;
     padding: 40px 24px;
     min-height: auto;
   }
 
-  .dashboard {
-    max-width: 400px;
+  .heroQuote {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .heroQuote figcaption {
+    align-self: flex-end;
   }
 
   .features {
