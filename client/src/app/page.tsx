@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <figure className={styles.heroQuote}>
-          <blockquote>«Я просто сгубил себя!»</blockquote>
+          <blockquote className={styles.quote}>«Я просто сгубил себя!»</blockquote>
           <figcaption>— Ф. М. Достоевский</figcaption>
         </figure>
 
@@ -18,11 +18,11 @@ export default function Home() {
             Избавься от вредных привычек и создай{" "}
             <span>лучшую версию себя</span>
           </h1>
-          <p className={styles.heroText}>
+          {/* <p className={styles.heroText}>
             Научно обоснованные методики помогут вам шаг за шагом изменить
             образ жизни, понять причины зависимости и закрепить результат
             навсегда.
-          </p>
+          </p> */}
           <div className={styles.heroButtons}>
             <Link href="/habits" className="btn btnPrimary">
               Начать путь к себе →
@@ -34,46 +34,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.features}>
-        <h2 className={styles.featuresTitle}>Мы помогаем вам</h2>
-        <div className={styles.featuresGrid}>
-          <article className={styles.featureCard}>
-            <div className={styles.featureIcon}>🎯</div>
-            <h3>Определить привычки</h3>
-            <p>
-              Выявите вредные привычки, которые мешают вам жить полной
-              жизнью, и осознайте их влияние на ваше здоровье.
-            </p>
-          </article>
-
-          <article className={styles.featureCard}>
-            <div className={styles.featureIcon}>🌿</div>
-            <h3>Понять причины</h3>
-            <p>
-              Глубокий анализ поможет понять, почему возникла зависимость
-              и что её поддерживает.
-            </p>
-          </article>
-
-          <article className={styles.featureCard}>
-            <div className={styles.featureIcon}>🧠</div>
-            <h3>Изменить мышление</h3>
-            <p>
-              Проверенные методики когнитивно-поведенческой терапии помогут
-              изменить паттерны мышления.
-            </p>
-          </article>
-
-          <article className={styles.featureCard}>
-            <div className={styles.featureIcon}>📈</div>
-            <h3>Закрепить результат</h3>
-            <p>
-              Система поддержки и ежедневные задания помогут закрепить
-              новые полезные привычки навсегда.
-            </p>
-          </article>
-        </div>
-      </section>
     </div>
   );
 }
