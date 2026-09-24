@@ -1,0 +1,255 @@
+{
+  "addiction": {
+    "habitId": 1,
+    "habitName": "Наркомания",
+    "planRoute": "/habits/addiction/plan",
+    "images": [
+      {
+        "id": "tabler-bong-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/bong-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/bong-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "bong-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутое приспособление для курения наркотиков.",
+        "notes": "Символ употребления наркотиков; без изображения человека или процесса употребления."
+      }
+    ]
+  },
+  "alcoholism": {
+    "habitId": 2,
+    "habitName": "Алкоголизм",
+    "planRoute": "/habits/alcoholism/plan",
+    "images": [
+      {
+        "id": "tabler-beer-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/beer-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/beer-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "beer-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутый пивной бокал.",
+        "notes": "Символ алкоголя; без маркировки напитка."
+      }
+    ]
+  },
+  "gambling": {
+    "habitId": 3,
+    "habitName": "Лудомания",
+    "planRoute": "/habits/gambling/plan",
+    "images": [
+      {
+        "id": "tabler-play-card-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/play-card-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/play-card-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "play-card-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутая игральная карта.",
+        "notes": "Символ азартных игр."
+      }
+    ]
+  },
+  "gaming": {
+    "habitId": 4,
+    "habitName": "Игромания",
+    "planRoute": "/habits/gaming/plan",
+    "images": [
+      {
+        "id": "mdi-controller-off",
+        "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/controller-off.svg",
+        "sourceUrl": "https://pictogrammers.com/library/mdi/icon/controller-off/",
+        "sourceName": "Material Design Icons / Pictogrammers",
+        "author": "Google",
+        "license": "Apache-2.0",
+        "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
+        "sourceLicenseUrl": "https://github.com/Templarian/MaterialDesign-SVG/blob/9e04201d4557e729822fb57f62a316c3dea1d4a8/LICENSE",
+        "attribution": "controller-off — Google, Material Design Icons / Pictogrammers, Apache-2.0.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутый игровой контроллер.",
+        "notes": "Символ видеоигр; без логотипа игровой платформы."
+      }
+    ]
+  },
+  "nail_biting": {
+    "habitId": 5,
+    "habitName": "Грызение ногтей",
+    "planRoute": "/habits/nail_biting/plan",
+    "images": [
+      {
+        "id": "tabler-hand-finger-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/hand-finger-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/hand-finger-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "hand-finger-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутая кисть с выделенным указательным пальцем.",
+        "notes": "Условный символ руки и пальца, а не буквальное изображение грызения ногтей."
+      }
+    ]
+  },
+  "overeating": {
+    "habitId": 6,
+    "habitName": "Переедание",
+    "planRoute": "/habits/overeating/plan",
+    "images": [
+      {
+        "id": "mdi-food-off",
+        "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/food-off.svg",
+        "sourceUrl": "https://pictogrammers.com/library/mdi/icon/food-off/",
+        "sourceName": "Material Design Icons / Pictogrammers",
+        "author": "Google",
+        "license": "Apache-2.0",
+        "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
+        "sourceLicenseUrl": "https://github.com/Templarian/MaterialDesign-SVG/blob/9e04201d4557e729822fb57f62a316c3dea1d4a8/LICENSE",
+        "attribution": "food-off — Google, Material Design Icons / Pictogrammers, Apache-2.0.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутые бургер и стакан.",
+        "notes": "Условный символ ограничения избыточного питания; само переедание не изображено."
+      }
+    ]
+  },
+  "profanity": {
+    "habitId": 7,
+    "habitName": "Использование нецензурной лексики",
+    "planRoute": "/habits/profanity/plan",
+    "images": [
+      {
+        "id": "tabler-message-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/message-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/message-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "message-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутое облако речи.",
+        "notes": "Условный символ ограничения нежелательной речи; без нецензурного текста."
+      }
+    ]
+  },
+  "scrolling": {
+    "habitId": 8,
+    "habitName": "Скроллинг социальных сетей",
+    "planRoute": "/habits/scrolling/plan",
+    "images": [
+      {
+        "id": "tabler-device-mobile-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/device-mobile-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/device-mobile-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "device-mobile-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутый смартфон.",
+        "notes": "Условный символ ограничения использования телефона; без логотипов социальных сетей."
+      }
+    ]
+  },
+  "shopaholism": {
+    "habitId": 9,
+    "habitName": "Шопоголизм",
+    "planRoute": "/habits/shopaholism/plan",
+    "images": [
+      {
+        "id": "tabler-shopping-cart-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/shopping-cart-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/shopping-cart-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "shopping-cart-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутая корзина на колёсах.",
+        "notes": "Символ ограничения покупок."
+      }
+    ]
+  },
+  "skin_picking": {
+    "habitId": 10,
+    "habitName": "Вырыванием кожи",
+    "planRoute": "/habits/skin_picking/plan",
+    "images": [
+      {
+        "id": "tabler-hand-off",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/hand-off.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/hand-off",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "hand-off — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутая открытая ладонь.",
+        "notes": "Условный символ отказа от прикосновений и ковыряния кожи; без ран и медицинских подробностей."
+      }
+    ]
+  },
+  "smoking": {
+    "habitId": 11,
+    "habitName": "Курение",
+    "planRoute": "/habits/smoking/plan",
+    "images": [
+      {
+        "id": "tabler-smoking-no",
+        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/smoking-no.svg",
+        "sourceUrl": "https://tabler.io/icons/icon/smoking-no",
+        "sourceName": "Tabler Icons",
+        "author": "Paweł Kuna",
+        "license": "MIT",
+        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
+        "attribution": "smoking-no — Tabler Icons, Paweł Kuna, MIT.",
+        "mimeType": "image/svg+xml",
+        "kind": "symbol",
+        "prohibitionMark": "diagonal-slash",
+        "description": "Перечёркнутая сигарета с дымом.",
+        "notes": "Символ отказа от курения."
+      }
+    ]
+  }
+}
