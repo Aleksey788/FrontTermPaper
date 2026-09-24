@@ -11,11 +11,7 @@ const ContactPage = () => {
             <span>Есть вопросы?</span>
             Свяжитесь с нами любым удобным для вас способом
           </h1>
-
-          <p className={styles.workingHours}>
-            9:00 – 18:00 (Московское время, UTC+3)
-          </p>
-
+          
           <nav className={styles.messengers}>
             <a href="#" className={styles.telegram}>
               Telegram
@@ -37,15 +33,6 @@ const ContactPage = () => {
             <a href="mailto:info@novayya.ru">info@novayya.ru</a>
           </section>
 
-          <section className={styles.navBlock}>
-            <h2>Навигация</h2>
-            <nav className={styles.navLinks}>
-              <Link href="/">Главная</Link>
-              <Link href="/habits">Привычки</Link>
-              <Link href="/contact">Контакты</Link>
-              <Link href="/login">Вход</Link>
-            </nav>
-          </section>
         </aside>
       </div>
     </div>

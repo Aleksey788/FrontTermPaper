@@ -3,7 +3,7 @@
   overflow-x: hidden;
   background:
     linear-gradient(135deg, rgba(18, 18, 18, 0.92) 0%, rgba(27, 67, 50, 0.7) 100%),
-    url("/images/home-hero-background.png") center top / 100% auto no-repeat;
+    url("/images/home-background-hand-right.png") center top / 100% auto no-repeat;
 }
 
 :global(main):has(> .page) + :global(footer) {
