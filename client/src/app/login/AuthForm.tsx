@@ -37,6 +37,8 @@ export default function AuthForm({ initialMode }: { initialMode: Mode }) {
       const response = await apiService.apiClient.post('/authoriz', {
         Email: email,
         Password: password,
+      }, {
+        timeout: 30000,
       });
 
       alert(response.data.message ?? "Код отправлен на почту");
@@ -132,7 +134,7 @@ export default function AuthForm({ initialMode }: { initialMode: Mode }) {
           onClick={() => setMode("login")}
           onKeyDown={handleTabKeyDown}
         >
-          LOG IN
+          ВХОД
         </button>
         <button
           ref={signupTab}
@@ -147,7 +149,7 @@ export default function AuthForm({ initialMode }: { initialMode: Mode }) {
           onClick={() => setMode("signup")}
           onKeyDown={handleTabKeyDown}
         >
-          SIGN UP
+          РЕГИСТРАЦИЯ
         </button>
       </div>
 

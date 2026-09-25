@@ -1,7 +1,5 @@
 "use client";
-import Link from "next/link";
-import styles from "./page.module.css";
-import backgroundStyles from "@/styles/planBackground.module.css";
+import PlanSelection from "@/components/PlanSelection";
 import { usePlanBackground } from "@/hooks/usePlanBackground";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -33,18 +31,7 @@ export default function PlansPage() {
   }, [])
 
   return (
-    <main className={styles.page}>
-      <div className={styles.container}>
-        {days.map((plan, index) => (
-          <div className={styles.test} key={plan.id}>
-          <Link href={`/habits/addiction/plan/plan${plan.countDay}`} className={`${styles.card} ${backgroundStyles.card}`} style={cardBackgrounds[index]}>
-            <div className={styles.titleDiv}><h2 className={styles.title}>{plan.countDay === "Individual" ? "Индивидуал" : `${plan.countDay} дней`}</h2></div>
-              {/* <p className={styles.description}>{plan.description}</p> */}
-          </Link>
-          </div>
-        ))}
-      </div>
-    </main>
+    <PlanSelection slug="addiction" days={days} cardBackgrounds={cardBackgrounds} />
   );
 
 }

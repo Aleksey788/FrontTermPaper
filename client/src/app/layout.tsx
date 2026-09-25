@@ -31,7 +31,7 @@ export default function RootLayout({
           <Link href="/" className={styles.logo}>
             <img src="/globe.svg" alt="Logo" width={48} height={48} />
             <div className={styles.logoText}>
-              <h4>Новая Я</h4>
+              <h4>Новый Я</h4>
               <p>Свобода от привычек</p>
             </div>
           </Link>
@@ -49,7 +49,7 @@ export default function RootLayout({
         <footer className={styles.footer}>
           <div className={styles.footerInner}>
             <div className={styles.footerBrand}>
-              <h3>Новая Я</h3>
+              <h3>Новый Я</h3>
               <p>
                 Помогаем избавиться от вредных привычек и создать лучшую
                 версию себя с помощью научно обоснованных методик.

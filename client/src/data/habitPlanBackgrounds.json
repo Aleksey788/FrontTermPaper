@@ -5,14 +5,12 @@
     "planRoute": "/habits/addiction/plan",
     "images": [
       {
-        "id": "addiction-prohibition",
-        "localSrc": "/images/habit-plans/addiction.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Крупный шприц внутри красного запрещающего круга; без людей и сцен употребления.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "addiction-freedom",
+        "localSrc": "/images/habit-plans/addiction.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person moves toward a sunlit landscape, leaving drug-related objects behind."
       }
     ]
   },
@@ -22,14 +20,12 @@
     "planRoute": "/habits/alcoholism/plan",
     "images": [
       {
-        "id": "alcoholism-prohibition",
-        "localSrc": "/images/habit-plans/alcoholism.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Чёрный силуэт бутылки внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "alcoholism-freedom",
+        "localSrc": "/images/habit-plans/alcoholism.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person walks along a lakeside pier, leaving a bottle and glass behind."
       }
     ]
   },
@@ -39,14 +35,12 @@
     "planRoute": "/habits/gambling/plan",
     "images": [
       {
-        "id": "gambling-prohibition",
-        "localSrc": "/images/habit-plans/gambling.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Игральные карты и фишка внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "gambling-freedom",
+        "localSrc": "/images/habit-plans/gambling.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person moves away from playing cards and casino chips toward a sunlit street."
       }
     ]
   },
@@ -56,14 +50,12 @@
     "planRoute": "/habits/gaming/plan",
     "images": [
       {
-        "id": "gaming-prohibition",
-        "localSrc": "/images/habit-plans/gaming.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Крупный игровой контроллер внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "gaming-freedom",
+        "localSrc": "/images/habit-plans/gaming.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person leaves a gaming setup and steps through an open door toward daylight."
       }
     ]
   },
@@ -73,14 +65,12 @@
     "planRoute": "/habits/nail_biting/plan",
     "images": [
       {
-        "id": "nail_biting-prohibition",
-        "localSrc": "/images/habit-plans/nail_biting.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Кисть с отчётливо выделенными ногтями внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "nail_biting-freedom",
+        "localSrc": "/images/habit-plans/nail_biting.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person moves toward a flower field, leaving nail-care objects behind."
       }
     ]
   },
@@ -90,14 +80,12 @@
     "planRoute": "/habits/overeating/plan",
     "images": [
       {
-        "id": "overeating-prohibition",
-        "localSrc": "/images/habit-plans/overeating.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Крупный бургер внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "overeating-freedom",
+        "localSrc": "/images/habit-plans/overeating.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person moves along a sunlit road, leaving fast food behind."
       }
     ]
   },
@@ -107,14 +95,12 @@
     "planRoute": "/habits/profanity/plan",
     "images": [
       {
-        "id": "profanity-prohibition",
-        "localSrc": "/images/habit-plans/profanity.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Облако речи с условными символами ругани внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "profanity-freedom",
+        "localSrc": "/images/habit-plans/profanity.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person moves toward a city skyline, leaving a megaphone with profanity symbols behind."
       }
     ]
   },
@@ -124,14 +110,12 @@
     "planRoute": "/habits/scrolling/plan",
     "images": [
       {
-        "id": "scrolling-prohibition",
-        "localSrc": "/images/habit-plans/scrolling.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Смартфон с карточками ленты внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "scrolling-freedom",
+        "localSrc": "/images/habit-plans/scrolling.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person walks toward the sea, leaving a phone and social media symbols behind."
       }
     ]
   },
@@ -141,14 +125,12 @@
     "planRoute": "/habits/shopaholism/plan",
     "images": [
       {
-        "id": "shopaholism-prohibition",
-        "localSrc": "/images/habit-plans/shopaholism.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Два пакета покупок внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "shopaholism-freedom",
+        "localSrc": "/images/habit-plans/shopaholism.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person walks along a sunlit shopping street with shopping bags and receipts in the foreground."
       }
     ]
   },
@@ -158,14 +140,12 @@
     "planRoute": "/habits/skin_picking/plan",
     "images": [
       {
-        "id": "skin_picking-prohibition",
-        "localSrc": "/images/habit-plans/skin_picking.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Палец над условным участком кожи внутри красного запрещающего круга; без ран и графических деталей.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "skin_picking-freedom",
+        "localSrc": "/images/habit-plans/skin_picking.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person moves into a flower field, leaving a mirror and skin-care objects behind."
       }
     ]
   },
@@ -175,14 +155,12 @@
     "planRoute": "/habits/smoking/plan",
     "images": [
       {
-        "id": "smoking-prohibition",
-        "localSrc": "/images/habit-plans/smoking.svg",
-        "sourceName": "Project artwork",
-        "mimeType": "image/svg+xml",
-        "kind": "symbol",
-        "prohibitionMark": "red-circle-and-slash",
-        "description": "Крупная сигарета с дымом внутри красного запрещающего круга.",
-        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
+        "id": "smoking-freedom",
+        "localSrc": "/images/habit-plans/smoking.png",
+        "sourceName": "User-provided collage",
+        "mimeType": "image/png",
+        "kind": "illustration",
+        "description": "A person walks along a sunlit road, leaving cigarettes and a cigarette pack behind."
       }
     ]
   }
