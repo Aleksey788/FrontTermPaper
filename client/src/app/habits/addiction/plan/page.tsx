@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import styles from "./page.module.css";
+import backgroundStyles from "@/styles/planBackground.module.css";
+import { usePlanBackground } from "@/hooks/usePlanBackground";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { PlanDay } from "@/domain/interface";
@@ -10,6 +12,7 @@ import { apiService } from "@/service/ApiService";
 
 export default function PlansPage() {
   const [days, setDays] = useState<PlanDay[]>([]);
+  const cardBackgrounds = usePlanBackground();
 
   useEffect(() => {
     const loadDays = async () => {
@@ -32,10 +35,10 @@ export default function PlansPage() {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        {days.map((plan) => (
-          <div className={styles.test}>
-          <Link href={`/habits/addiction/plan/plan${plan.countDay}`} key={plan.id} className={styles.card}>
-            <div className={styles.titleDiv}><h2 className={styles.title}>{plan.countDay}{plan.countDay !== "Individual" && " дней"}</h2></div>
+        {days.map((plan, index) => (
+          <div className={styles.test} key={plan.id}>
+          <Link href={`/habits/addiction/plan/plan${plan.countDay}`} className={`${styles.card} ${backgroundStyles.card}`} style={cardBackgrounds[index]}>
+            <div className={styles.titleDiv}><h2 className={styles.title}>{plan.countDay === "Individual" ? "Индивидуал" : `${plan.countDay} дней`}</h2></div>
               {/* <p className={styles.description}>{plan.description}</p> */}
           </Link>
           </div>

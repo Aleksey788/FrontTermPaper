@@ -1,0 +1,28 @@
+.card.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--habit-plan-background, none) center / 90% auto no-repeat;
+  filter: blur(1.5px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.card > * {
+  /* Keep the text crisp and readable over the white part of the sign. */
+  text-shadow: 0 1px 3px #000, 0 0 6px #000;
+}

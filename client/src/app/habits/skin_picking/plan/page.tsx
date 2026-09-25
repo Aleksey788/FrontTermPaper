@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
 import styles from "./page.module.css";
+import backgroundStyles from "@/styles/planBackground.module.css";
+import { usePlanBackground } from "@/hooks/usePlanBackground";
 import { useEffect, useState } from "react";
 import { PlanDay } from "@/domain/interface";
 import { apiService } from "@/service/ApiService";
 
 export default function PlansPage() {
   const [days, setDays] = useState<PlanDay[]>([]);
+  const cardBackgrounds = usePlanBackground();
 
   useEffect(() => {
     const loadDays = async () => {
@@ -29,9 +32,9 @@ export default function PlansPage() {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        {days.map((plan) => (
-          <Link href={`/habits/skin_picking/plan/plan${plan.countDay}`} key={plan.id} className={styles.card}>
-              <h2 className={styles.title}>{plan.countDay} дней</h2>
+        {days.map((plan, index) => (
+          <Link href={`/habits/skin_picking/plan/plan${plan.countDay}`} key={plan.id} className={`${styles.card} ${backgroundStyles.card}`} style={cardBackgrounds[index]}>
+              <h2 className={styles.title}>{plan.countDay === "Individual" ? "Индивидуал" : `${plan.countDay} дней`}</h2>
               <p className={styles.description}>{plan.description}</p>
           </Link>
         ))}

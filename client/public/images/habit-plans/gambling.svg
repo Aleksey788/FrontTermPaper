@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Нет азартным играм</title>
+  <circle cx="128" cy="128" r="110" fill="#ffffff"/>
+  <g stroke="#111111" stroke-width="8" stroke-linejoin="round">
+    <g transform="rotate(-14 102 126)">
+      <rect x="63" y="63" width="78" height="124" rx="8" fill="#ffffff"/>
+      <path d="M102 93c-9 13-24 21-24 34 0 13 15 17 24 7 9 10 24 6 24-7 0-13-15-21-24-34Z" fill="#111111" stroke="none"/>
+      <path d="m102 126-9 28h18Z" fill="#111111" stroke="none"/>
+    </g>
+    <g transform="rotate(12 157 119)">
+      <rect x="119" y="56" width="76" height="124" rx="8" fill="#ffffff"/>
+      <path d="m157 88 23 31-23 31-23-31Z" fill="#111111" stroke="none"/>
+    </g>
+  </g>
+  <circle cx="165" cy="185" r="26" fill="#111111"/>
+  <circle cx="165" cy="185" r="18" fill="none" stroke="#ffffff" stroke-width="5" stroke-dasharray="8 6"/>
+  <g fill="none" stroke="#ff0000" stroke-width="22">
+    <circle cx="128" cy="128" r="110"/>
+    <path d="M50 50 206 206"/>
+  </g>
+</svg>

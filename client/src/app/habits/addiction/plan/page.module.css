@@ -26,9 +26,6 @@
 }
 
 .card {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,17 +48,6 @@
   overflow-wrap: anywhere;
 
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: url("/images/habit-plans/addiction.svg") center / 90% auto no-repeat;
-  filter: invert(1) blur(1.5px);
-  opacity: 0.3;
-  pointer-events: none;
 }
 
 .card:hover {

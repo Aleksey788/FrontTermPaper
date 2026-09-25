@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Не грызть ногти</title>
+  <circle cx="128" cy="128" r="110" fill="#ffffff"/>
+  <path d="M86 143V83c0-16 22-16 22 0v37-61c0-17 24-17 24 0v62-55c0-16 23-16 23 0v63-36c0-15 23-15 23 0v69c0 33-21 51-48 51-18 0-30-8-40-22l-32-43c-10-14 7-29 18-17Z" fill="#111111"/>
+  <g fill="#ffffff">
+    <rect x="91" y="78" width="12" height="21" rx="5"/>
+    <rect x="114" y="56" width="12" height="23" rx="5"/>
+    <rect x="138" y="63" width="11" height="22" rx="5"/>
+    <rect x="161" y="91" width="11" height="19" rx="5"/>
+    <path d="m64 138 8-6 13 16-8 6Z"/>
+  </g>
+  <g fill="none" stroke="#ff0000" stroke-width="22">
+    <circle cx="128" cy="128" r="110"/>
+    <path d="M50 50 206 206"/>
+  </g>
+</svg>

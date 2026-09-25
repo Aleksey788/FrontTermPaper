@@ -5,20 +5,14 @@
     "planRoute": "/habits/addiction/plan",
     "images": [
       {
-        "id": "tabler-bong-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/bong-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/bong-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "bong-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "addiction-prohibition",
+        "localSrc": "/images/habit-plans/addiction.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутое приспособление для курения наркотиков.",
-        "notes": "Символ употребления наркотиков; без изображения человека или процесса употребления."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Крупный шприц внутри красного запрещающего круга; без людей и сцен употребления.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -28,20 +22,14 @@
     "planRoute": "/habits/alcoholism/plan",
     "images": [
       {
-        "id": "tabler-beer-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/beer-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/beer-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "beer-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "alcoholism-prohibition",
+        "localSrc": "/images/habit-plans/alcoholism.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутый пивной бокал.",
-        "notes": "Символ алкоголя; без маркировки напитка."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Чёрный силуэт бутылки внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -51,20 +39,14 @@
     "planRoute": "/habits/gambling/plan",
     "images": [
       {
-        "id": "tabler-play-card-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/play-card-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/play-card-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "play-card-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "gambling-prohibition",
+        "localSrc": "/images/habit-plans/gambling.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутая игральная карта.",
-        "notes": "Символ азартных игр."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Игральные карты и фишка внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -74,20 +56,14 @@
     "planRoute": "/habits/gaming/plan",
     "images": [
       {
-        "id": "mdi-controller-off",
-        "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/controller-off.svg",
-        "sourceUrl": "https://pictogrammers.com/library/mdi/icon/controller-off/",
-        "sourceName": "Material Design Icons / Pictogrammers",
-        "author": "Google",
-        "license": "Apache-2.0",
-        "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
-        "sourceLicenseUrl": "https://github.com/Templarian/MaterialDesign-SVG/blob/9e04201d4557e729822fb57f62a316c3dea1d4a8/LICENSE",
-        "attribution": "controller-off — Google, Material Design Icons / Pictogrammers, Apache-2.0.",
+        "id": "gaming-prohibition",
+        "localSrc": "/images/habit-plans/gaming.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутый игровой контроллер.",
-        "notes": "Символ видеоигр; без логотипа игровой платформы."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Крупный игровой контроллер внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -97,20 +73,14 @@
     "planRoute": "/habits/nail_biting/plan",
     "images": [
       {
-        "id": "tabler-hand-finger-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/hand-finger-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/hand-finger-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "hand-finger-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "nail_biting-prohibition",
+        "localSrc": "/images/habit-plans/nail_biting.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутая кисть с выделенным указательным пальцем.",
-        "notes": "Условный символ руки и пальца, а не буквальное изображение грызения ногтей."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Кисть с отчётливо выделенными ногтями внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -120,20 +90,14 @@
     "planRoute": "/habits/overeating/plan",
     "images": [
       {
-        "id": "mdi-food-off",
-        "url": "https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/9e04201d4557e729822fb57f62a316c3dea1d4a8/svg/food-off.svg",
-        "sourceUrl": "https://pictogrammers.com/library/mdi/icon/food-off/",
-        "sourceName": "Material Design Icons / Pictogrammers",
-        "author": "Google",
-        "license": "Apache-2.0",
-        "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
-        "sourceLicenseUrl": "https://github.com/Templarian/MaterialDesign-SVG/blob/9e04201d4557e729822fb57f62a316c3dea1d4a8/LICENSE",
-        "attribution": "food-off — Google, Material Design Icons / Pictogrammers, Apache-2.0.",
+        "id": "overeating-prohibition",
+        "localSrc": "/images/habit-plans/overeating.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутые бургер и стакан.",
-        "notes": "Условный символ ограничения избыточного питания; само переедание не изображено."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Крупный бургер внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -143,20 +107,14 @@
     "planRoute": "/habits/profanity/plan",
     "images": [
       {
-        "id": "tabler-message-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/message-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/message-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "message-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "profanity-prohibition",
+        "localSrc": "/images/habit-plans/profanity.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутое облако речи.",
-        "notes": "Условный символ ограничения нежелательной речи; без нецензурного текста."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Облако речи с условными символами ругани внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -166,20 +124,14 @@
     "planRoute": "/habits/scrolling/plan",
     "images": [
       {
-        "id": "tabler-device-mobile-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/device-mobile-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/device-mobile-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "device-mobile-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "scrolling-prohibition",
+        "localSrc": "/images/habit-plans/scrolling.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутый смартфон.",
-        "notes": "Условный символ ограничения использования телефона; без логотипов социальных сетей."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Смартфон с карточками ленты внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -189,20 +141,14 @@
     "planRoute": "/habits/shopaholism/plan",
     "images": [
       {
-        "id": "tabler-shopping-cart-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/shopping-cart-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/shopping-cart-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "shopping-cart-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "shopaholism-prohibition",
+        "localSrc": "/images/habit-plans/shopaholism.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутая корзина на колёсах.",
-        "notes": "Символ ограничения покупок."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Два пакета покупок внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -212,20 +158,14 @@
     "planRoute": "/habits/skin_picking/plan",
     "images": [
       {
-        "id": "tabler-hand-off",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/hand-off.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/hand-off",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "hand-off — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "skin_picking-prohibition",
+        "localSrc": "/images/habit-plans/skin_picking.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутая открытая ладонь.",
-        "notes": "Условный символ отказа от прикосновений и ковыряния кожи; без ран и медицинских подробностей."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Палец над условным участком кожи внутри красного запрещающего круга; без ран и графических деталей.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   },
@@ -235,20 +175,14 @@
     "planRoute": "/habits/smoking/plan",
     "images": [
       {
-        "id": "tabler-smoking-no",
-        "url": "https://raw.githubusercontent.com/tabler/tabler-icons/0239805680a36bab4e1070529b6744924402d804/icons/outline/smoking-no.svg",
-        "sourceUrl": "https://tabler.io/icons/icon/smoking-no",
-        "sourceName": "Tabler Icons",
-        "author": "Paweł Kuna",
-        "license": "MIT",
-        "licenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "sourceLicenseUrl": "https://github.com/tabler/tabler-icons/blob/0239805680a36bab4e1070529b6744924402d804/LICENSE",
-        "attribution": "smoking-no — Tabler Icons, Paweł Kuna, MIT.",
+        "id": "smoking-prohibition",
+        "localSrc": "/images/habit-plans/smoking.svg",
+        "sourceName": "Project artwork",
         "mimeType": "image/svg+xml",
         "kind": "symbol",
-        "prohibitionMark": "diagonal-slash",
-        "description": "Перечёркнутая сигарета с дымом.",
-        "notes": "Символ отказа от курения."
+        "prohibitionMark": "red-circle-and-slash",
+        "description": "Крупная сигарета с дымом внутри красного запрещающего круга.",
+        "notes": "Оригинальный SVG для проекта: чёрный символ на белом диске, красный запрещающий круг и диагональ. Один вариант для этой привычки."
       }
     ]
   }

@@ -1,22 +1,17 @@
-<!--
-category: Design
-tags: [smoke, smoking, cannabis, marijuana, drugs, bong, off, disabled, inactive]
-version: "1.94"
-unicode: "f3c7"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M9 5v-2h4v6m1.5 1.5l2.5 -2.5l2 2l-2.5 2.5m-.5 3.505a5 5 0 1 1 -7 -4.589v-2.416" />
-  <path d="M8 3h6" />
-  <path d="M6.1 17h9.8" />
-  <path d="M3 3l18 18" />
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Нет наркотикам</title>
+  <circle cx="128" cy="128" r="110" fill="#ffffff"/>
+  <g transform="rotate(45 128 128)" fill="#111111">
+    <rect x="101" y="45" width="54" height="10" rx="3"/>
+    <rect x="122" y="52" width="12" height="26"/>
+    <rect x="99" y="74" width="58" height="10" rx="3"/>
+    <rect x="108" y="80" width="40" height="86" rx="5"/>
+    <rect x="117" y="89" width="22" height="62" rx="2" fill="#ffffff"/>
+    <path d="M118 105h14M118 121h14M118 137h14" fill="none" stroke="#111111" stroke-width="5"/>
+    <path d="M119 165h18v13h-18zM125 176h6v34h-6z"/>
+  </g>
+  <g fill="none" stroke="#ff0000" stroke-width="22">
+    <circle cx="128" cy="128" r="110"/>
+    <path d="M50 50 206 206"/>
+  </g>
 </svg>
