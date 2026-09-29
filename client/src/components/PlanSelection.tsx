@@ -12,7 +12,7 @@ type PlanSelectionProps = {
 
 export default function PlanSelection({ slug, days, cardBackgrounds }: PlanSelectionProps) {
   return (
-    <main className={styles.page}>
+    <main className={`imageSurface ${styles.page}`}>
       <div className={styles.container}>
         {days.map((plan, index) => (
           <div className={styles.test} key={plan.id}>

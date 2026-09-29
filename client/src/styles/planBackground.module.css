@@ -16,7 +16,15 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--habit-plan-background, none);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.52) 42%,
+      rgba(0, 0, 0, 0.52) 58%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    var(--habit-plan-background, none);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

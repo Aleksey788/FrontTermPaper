@@ -1,9 +1,15 @@
+
 .page {
   min-height: 100%;
   overflow-x: hidden;
+
   background:
-    linear-gradient(135deg, rgba(18, 18, 18, 0.92) 0%, rgba(27, 67, 50, 0.7) 100%),
-    url("/images/home-background-hand-right.png") center top / 100% auto no-repeat;
+    url("/images/home-background-hand-right.png")
+    center top / 100% auto no-repeat;
+
+  & figcaption {
+    color: black;
+  }
 }
 
 :global(main):has(> .page) + :global(footer) {
@@ -56,7 +62,6 @@
 
 .heroQuote figcaption {
   flex-shrink: 0;
-  color: var(--color-text-muted);
   font-size: 15px;
   line-height: 1.5;
   white-space: nowrap;
@@ -67,16 +72,6 @@
   max-width: 620px;
 }
 
-.badge {
-  display: inline-block;
-  padding: 8px 20px;
-  background: rgba(82, 183, 136, 0.15);
-  border: 1px solid rgba(82, 183, 136, 0.3);
-  border-radius: var(--radius-pill);
-  font-size: 13px;
-  color: var(--color-green-bright);
-  margin-bottom: 24px;
-}
 
 .heroTitle {
   font-size: clamp(32px, 4vw, 48px);
@@ -85,9 +80,9 @@
   margin-bottom: 20px;
 }
 
-.heroTitle span {
-  color: var(--color-green-bright);
-}
+  .heroTitle span {
+    color: rgb(241, 168, 33);
+  }
 
 /* .heroText {
   font-size: 17px;

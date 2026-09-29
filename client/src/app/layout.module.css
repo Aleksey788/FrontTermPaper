@@ -1,13 +1,138 @@
+.header,
+.footer,
+.main:not(:has(:global(.imageSurface))) {
+  /* Local palette: image-backed pages keep the original root tokens. */
+  --color-bg-card: #f6fbf7;
+  --color-bg-light: #d9efe0;
+  --color-bg-white: #ffffff;
+  --color-text: #173d2b;
+  --color-text-muted: #496653;
+  --color-text-dark: #173d2b;
+  --color-text-secondary: #496653;
+  --color-green: #28734b;
+  --color-green-light: #28734b;
+  --color-green-bright: #22543d;
+  --color-green-dark: #173d2b;
+  --color-border: #b9dec5;
+  --color-border-light: #b9dec5;
+  --shadow-sm: 0 4px 16px rgba(16, 43, 32, 0.06);
+  --shadow-md: 0 8px 28px rgba(16, 43, 32, 0.1);
+  --shadow-lg: 0 12px 32px rgba(16, 43, 32, 0.14);
+  color: var(--color-text);
+}
+
+.main:not(:has(:global(.imageSurface))) {
+  background: linear-gradient(135deg, #f6fbf7, #edf7ef 65%, #d9efe0);
+  color-scheme: light;
+
+  & :where(h1, h2, h3) {
+    color: var(--color-text);
+  }
+
+  & :where(a:not([class])) {
+    color: var(--color-green-bright);
+  }
+
+  & :where(button),
+  & :global(.btnPrimary),
+  & :global(.habitLanding) a {
+    background: linear-gradient(135deg, #28734b, #22543d);
+    color: #ffffff;
+    border: 1px solid #28734b;
+    border-radius: 12px;
+    box-shadow: 0 5px 16px rgba(40, 115, 75, 0.16);
+  }
+
+  & :where(button:hover:not(:disabled)),
+  & :global(.btnPrimary):hover,
+  & :global(.habitLanding) a:hover {
+    background: linear-gradient(135deg, #28734b, #22543d);
+    color: #ffffff;
+    box-shadow: 0 8px 22px rgba(40, 115, 75, 0.24);
+  }
+
+  & :where(input:not([type="checkbox"]):not([type="radio"]), textarea, select) {
+    background: #ffffff;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+  }
+
+  & :where(input, textarea)::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  & :where(input[type="checkbox"], input[type="radio"]) {
+    accent-color: #28734b;
+  }
+
+  & :where(a, button, input, textarea, select, summary):focus-visible {
+    outline: 2px solid var(--color-focus, #28734b);
+    outline-offset: 3px;
+  }
+
+  & :global(.btnSecondary),
+  & :global(.reviewModal) button:last-child {
+    background: #d9efe0;
+    color: var(--color-text);
+    border-color: var(--color-border);
+  }
+
+  & :where(button:disabled) {
+    background: #d9efe0;
+    color: #496653;
+    border-color: #b9dec5;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  & :global(.habitLanding),
+  & :global(.formCard),
+  & :global(.planDetails) article,
+  & :global(.reviewModal) {
+    background: var(--color-bg-card);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+  }
+
+  & :global(.planDetails) article:hover {
+    border-color: #4fa875;
+    box-shadow: var(--shadow-lg);
+  }
+
+  & :where([role="alert"]) {
+    color: #9a3412;
+    background: #fff0e5;
+    border-radius: 8px;
+  }
+
+  & :where([role="status"]) {
+    color: #426028;
+    background: #f0f5e8;
+    border-radius: 8px;
+  }
+}
+
 .header {
+  --color-text: #f6fbf7;
+  --color-text-muted: #b9dec5;
+  --color-green-bright: #78bd91;
+  --color-border: #34865a;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 16px 48px;
-  background: var(--color-bg-dark);
+  background: white;
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
+
+  .logoTextH4{
+    color: orange;
+  }
 }
 
 .logo {
@@ -39,6 +164,12 @@
   display: flex;
   gap: 8px;
   justify-self: center;
+
+  .navLink
+  {
+    font-size: 16px;
+    color: black;
+  }
 }
 
 .nav a {
@@ -53,15 +184,27 @@
 }
 
 .nav a:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  background: #22543d;
 }
 
 .footer {
-  background: var(--color-bg-dark);
+  --color-text: #f6fbf7;
+  --color-text-muted: #b9dec5;
+  --color-green-bright: #78bd91;
+  --color-border: #34865a;
+  background: orange;
   border-top: 1px solid var(--color-border);
   padding: 50px 48px 24px;
   margin-top: auto;
+
+  & p {
+    color: rgb(0, 0, 0);
+  }
+
+  & a {
+    color: rgb(0, 0, 0);
+  }
 }
 
 .footerInner {
@@ -79,7 +222,6 @@
 }
 
 .footerBrand p {
-  color: var(--color-text-muted);
   font-size: 14px;
   max-width: 280px;
 }
@@ -101,7 +243,6 @@
 }
 
 .footerNav a {
-  color: var(--color-text-muted);
   font-size: 14px;
   transition: color var(--transition);
 }
@@ -111,13 +252,11 @@
 }
 
 .footerContact p {
-  color: var(--color-text-muted);
   font-size: 14px;
   margin-bottom: 8px;
 }
 
 .footerContact a {
-  color: var(--color-green-bright);
   font-size: 14px;
 }
 
@@ -130,8 +269,13 @@
 }
 
 .footerBottom p {
-  color: var(--color-text-muted);
   font-size: 13px;
+}
+
+.header a:focus-visible,
+.footer a:focus-visible {
+  outline: 2px solid #78bd91;
+  outline-offset: 4px;
 }
 
 @media (max-width: 768px) {

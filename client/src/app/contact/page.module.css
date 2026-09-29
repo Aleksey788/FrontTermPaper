@@ -1,5 +1,11 @@
 .page {
-  background: #1a1a1a;
+  background: linear-gradient(135deg, #102b20, #173d2b);
+  --color-text: #f6fbf7;
+  --color-text-muted: #b9dec5;
+  --color-green-bright: #78bd91;
+  --color-bg-card: #22543d;
+  --color-border: #4fa875;
+  --color-focus: #78bd91;
   color: var(--color-text);
   min-height: 70vh;
   padding: 80px 48px;
@@ -63,24 +69,24 @@
 }
 
 .telegram {
-  background: var(--color-green-light);
+  background: linear-gradient(135deg, #28734b, #22543d);
   color: var(--color-text);
 }
 
 .telegram:hover {
-  background: var(--color-green-bright);
+  background: #22543d;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(64, 145, 108, 0.4);
+  box-shadow: 0 4px 16px rgba(40, 115, 75, 0.24);
 }
 
 .whatsapp {
-  background: rgba(255, 255, 255, 0.1);
+  background: #f6fbf7;
   border: 1px solid var(--color-border);
-  color: var(--color-text);
+  color: #173d2b;
 }
 
 .whatsapp:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: #b9dec5;
   transform: translateY(-2px);
 }
 
@@ -93,7 +99,10 @@
 .contactBlock {
   min-width: 0;
   padding: 24px;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
 }
 
 .contactBlock h2 {

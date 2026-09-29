@@ -5,6 +5,13 @@
 }
 
 .sidebar {
+  --color-bg-card: #173d2b;
+  --color-bg-light: #22543d;
+  --color-text: #f6fbf7;
+  --color-text-muted: #b9dec5;
+  --color-green-bright: #78bd91;
+  --color-border: #34865a;
+  --color-focus: #78bd91;
   background: var(--color-bg-card);
   border-right: 1px solid var(--color-border);
   padding: 32px 0;
@@ -31,8 +38,8 @@
 }
 
 .sidebar nav a:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  background: var(--color-bg-light);
   border-left-color: var(--color-green-light);
 }
 
@@ -120,6 +127,7 @@
 }
 
 .day {
+  box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 20px;
@@ -141,6 +149,7 @@
 }
 
 .editBlock {
+  box-shadow: var(--shadow-sm);
   margin-top: 32px;
   display: flex;
   flex-direction: column;

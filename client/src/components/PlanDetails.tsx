@@ -181,7 +181,7 @@ export default function PlanDetails({
   );
 
   return (
-    <div>
+    <div className="planDetails">
       <h1>{title}</h1>
 
       {state.kind === "loading" && <p>Загрузка плана...</p>}
@@ -249,7 +249,7 @@ export default function PlanDetails({
 
       {reviewClasses && selectedDay && (
         <div className={reviewClasses.overlay}>
-          <div className={reviewClasses.modal}>
+          <div className={`reviewModal ${reviewClasses.modal}`}>
             <h2>Отзыв за {selectedDay.number} день</h2>
             <label>Количество звёзд</label>
             <div className={reviewClasses.stars}>

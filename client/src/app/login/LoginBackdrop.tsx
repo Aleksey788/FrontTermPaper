@@ -54,7 +54,7 @@ export default function LoginBackdrop({ children }: { children: ReactNode }) {
     : undefined;
 
   return (
-    <div className={styles.authPage} style={backgroundStyle}>
+    <div className={`imageSurface ${styles.authPage}`} style={backgroundStyle}>
       {children}
       {background?.quote && (
         <figure className={styles.quoteCard}>

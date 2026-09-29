@@ -23,7 +23,8 @@
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  color: white;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
   font-size: 17px;
   font-weight: 600;
   transition: all var(--transition);
@@ -41,6 +42,13 @@
   background: linear-gradient(90deg, var(--color-green-dark), var(--color-green-bright));
   opacity: 0;
   transition: opacity var(--transition);
+}
+
+.habitLink:nth-child(3n) {
+  --color-bg-card: #173d2b;
+  --color-text: #f6fbf7;
+  --color-border: #4fa875;
+  --color-green-bright: #b9dec5;
 }
 
 .habitLink:hover {

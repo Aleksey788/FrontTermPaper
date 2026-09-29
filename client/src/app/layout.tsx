@@ -31,20 +31,28 @@ export default function RootLayout({
           <Link href="/" className={styles.logo}>
             <img src="/globe.svg" alt="Logo" width={48} height={48} />
             <div className={styles.logoText}>
-              <h4>Новый Я</h4>
+              <h4 className={styles.logoTextH4}>Новый Я</h4>
               <p>Свобода от привычек</p>
             </div>
           </Link>
 
           <nav className={styles.nav}>
-            <Link href="/">Главная</Link>
-            <Link href="/contact">Контакты</Link>
-            <Link href="/login">Вход</Link>
-            <Link href="/habits">Привычки</Link>
+            <Link href="/" className={styles.navLink}>
+             Главная
+            </Link>
+            <Link href="/contact" className={styles.navLink}>
+             Контакты
+            </Link>
+            <Link href="/login" className={styles.navLink}>
+             Вход
+            </Link>
+            <Link href="/habits" className={styles.navLink}>
+             Привычки
+            </Link>
           </nav>
         </header>
 
-        <main>{children}</main>
+        <main className={styles.main}>{children}</main>
 
         <footer className={styles.footer}>
           <div className={styles.footerInner}>
