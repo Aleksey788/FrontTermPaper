@@ -56,6 +56,43 @@ main {
   flex: 1;
 }
 
+/* Opt-in sizing for contacts and the habits section, including plan pages. */
+body:has(> main > .viewportPage) {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body:has(> main > .viewportPage) > :is(header, footer) {
+  flex-shrink: 0;
+}
+
+body > main:has(> .viewportPage) {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.viewportPage {
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.viewportContent {
+  padding: clamp(16px, 3vw, 48px);
+}
+
+.viewportContent > :is(h1, p) {
+  max-width: 75ch;
+  overflow-wrap: anywhere;
+}
+
+.viewportPage .reviewModal {
+  max-width: calc(100% - 32px);
+}
+
 img {
   max-width: 100%;
   display: block;

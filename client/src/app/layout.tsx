@@ -29,7 +29,7 @@ export default function RootLayout({
       <body>
         <header className={styles.header}>
           <Link href="/" className={styles.logo}>
-            <img src="/globe.svg" alt="Logo" width={48} height={48} />
+            <img src="/logo-door.svg" alt="Logo" width={90} height={90}/>
             <div className={styles.logoText}>
               <h4 className={styles.logoTextH4}>Новый Я</h4>
               <p>Свобода от привычек</p>

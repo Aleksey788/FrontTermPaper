@@ -3,11 +3,11 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div className="viewportPage viewportContent">
       <h1>Страница о вырывании кожи</h1>
       <Link href="/habits/skin_picking/plan">Перейти к плану</Link>
     </div>
   )
 }
 
-export default page 
+export default page

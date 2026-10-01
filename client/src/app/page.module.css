@@ -1,14 +1,17 @@
 
 .page {
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
   overflow-x: hidden;
 
   background:
     url("/images/home-background-hand-right.png")
-    center top / 100% auto no-repeat;
+    center center / cover no-repeat;
 
   & figcaption {
-    color: black;
+    color: white;
+    font-size: 25px;
   }
 }
 
@@ -98,12 +101,21 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 900px) {
-  .page {
-    background-position: center top, 58% top;
-    background-size: auto, auto 100vh;
-  }
+.heroButtons :global(.btnPrimary) {
+  background: #f59e0b;
+  color: #30251c;
+}
 
+.heroButtons :global(.btnPrimary):hover {
+  background: #ea8a00;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+}
+
+.heroButtons :global(.btnPrimary):active {
+  background: #d97706;
+}
+
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     grid-template-areas:

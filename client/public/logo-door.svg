@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="765" height="360" viewBox="0 0 765 360" role="img" aria-label="Открытая дверь со светом и лестницей">
+<defs>
+ <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b2134"/><stop offset="1" stop-color="#172f45"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffa82e"/><stop offset="1" stop-color="#ffd38b"/></linearGradient>
+ <linearGradient id="light" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ffc36a" stop-opacity=".94"/><stop offset="1" stop-color="#fff8ec" stop-opacity="0"/></linearGradient>
+ <linearGradient id="pale" x1=".6" y1="0" x2="0" y2="1"><stop stop-color="#fff0d4"/><stop offset="1" stop-color="#fff9f1"/></linearGradient>
+</defs>
+<!-- Door opening and frame -->
+<path d="M365 54 511 3 511 186 479 172 479 34Z" fill="url(#gold)"/>
+<path d="M362 54 479 34 479 172 362 172Z" fill="#fff"/>
+<path d="M272 14 361 54 361 174 272 202Z" fill="url(#navy)"/>
+<path d="M347 108h4v18h-4z" fill="#fff"/>
+<!-- Staircase -->
+<path d="M327 173h112l-8 7H317Z" fill="url(#gold)"/>
+<path d="M316 181h115l-21 15H287Z" fill="url(#navy)"/>
+<path d="M272 202h132l-23 17H256v-14Z" fill="url(#navy)"/>
+<path d="M232 225h149l-25 20H202v-19Z" fill="url(#navy)"/>
+<path d="M171 256h185l-27 24H141v-23Z" fill="url(#navy)"/>
+<path d="M96 291h233l-31 25H71v-24Z" fill="url(#navy)"/>
+<path d="M1 330h269l-42 29H1Z" fill="url(#navy)"/>
+<!-- Gold illumination, flowing down from the open doorway -->
+<path d="M479 172 765 324v36H383Z" fill="url(#light)"/>
+<path d="M479 172 383 360H195L361 174Z" fill="url(#pale)"/>
+<path d="M479 172 765 324v36H383Z" fill="url(#light)" opacity=".55"/>
+</svg>

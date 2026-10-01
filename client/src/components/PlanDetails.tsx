@@ -181,7 +181,7 @@ export default function PlanDetails({
   );
 
   return (
-    <div className="planDetails">
+    <div className="planDetails viewportPage viewportContent">
       <h1>{title}</h1>
 
       {state.kind === "loading" && <p>Загрузка плана...</p>}

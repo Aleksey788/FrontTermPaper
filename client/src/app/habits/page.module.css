@@ -1,5 +1,16 @@
 .page {
-  max-width: 900px;
+  --color-bg-card: #ffffff;
+  --color-text: #292524;
+  --color-text-muted: #78716c;
+  --color-border: #f5d5ab;
+  --color-green-light: #f59e0b;
+  --color-green-bright: #d97706;
+  --color-green-dark: #f59e0b;
+  --color-focus: #d97706;
+  --shadow-sm: 0 8px 28px rgba(180, 100, 20, 0.08);
+  --shadow-md: 0 12px 32px rgba(245, 158, 11, 0.15);
+  color: var(--color-text);
+  max-width: none;
   margin: 0 auto;
   padding: 48px 24px 80px;
 }
@@ -44,11 +55,13 @@
   transition: opacity var(--transition);
 }
 
+/* Override the layout background only around the habits list. */
+:global(main):has(> .page.page) {
+  background: linear-gradient(135deg, #ffffff 0%, #fff8f0 55%, #fff1df 100%);
+}
+
 .habitLink:nth-child(3n) {
-  --color-bg-card: #173d2b;
-  --color-text: #f6fbf7;
-  --color-border: #4fa875;
-  --color-green-bright: #b9dec5;
+  --color-bg-card: #fff8f0;
 }
 
 .habitLink:hover {
@@ -60,4 +73,26 @@
 
 .habitLink:hover::before {
   opacity: 1;
+}
+
+.habitLink:active {
+  background: #fff1df;
+  border-color: #d97706;
+  color: #b45309;
+}
+
+.page .habitLink:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .habitLink,
+  .habitLink::before {
+    transition: none;
+  }
+
+  .habitLink:hover {
+    transform: none;
+  }
 }

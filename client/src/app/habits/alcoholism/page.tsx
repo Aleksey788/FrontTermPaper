@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div className="viewportPage viewportContent">
       <h1>Страница о алкоголизме</h1>
       <Link href="/habits/alcoholism/plan">Перейти к плану</Link>
     </div>

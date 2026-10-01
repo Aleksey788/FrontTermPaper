@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 
 const ContactPage = () => {
   return (
-    <div className={styles.page}>
+    <div className={`viewportPage ${styles.page}`}>
       <div className={styles.content}>
         <section className={styles.info}>
           <h1>

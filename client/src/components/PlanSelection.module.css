@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-  min-height: 100vh;
   background-image: url("/images/plan-page-background.png");
   background-size: cover;
   background-position: center;
@@ -15,7 +14,9 @@
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
-  width: 1800px;
+  width: 100%;
+  max-width: 1800px;
+  min-width: 0;
   gap: 24px;
 
   .titleDiv{
@@ -24,6 +25,8 @@
   }
 
   .test{
+    min-width: 0;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +101,10 @@
 }
 
 @media (max-width: 480px) {
+  .test {
+    width: 100%;
+  }
+
   .card {
     width: 100%;
   }

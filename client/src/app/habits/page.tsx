@@ -32,7 +32,7 @@ export default function Habits() {
     []);
 
     return (
-        <div className={style.page}>
+        <div className={`viewportPage ${style.page}`}>
             <h1>Список привычек</h1>
             <div className={style.grid}>
 {habits.map((habit) => {

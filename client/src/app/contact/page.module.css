@@ -1,30 +1,26 @@
 .page {
-  background: linear-gradient(135deg, #102b20, #173d2b);
-  --color-text: #f6fbf7;
-  --color-text-muted: #b9dec5;
-  --color-green-bright: #78bd91;
-  --color-bg-card: #22543d;
-  --color-border: #4fa875;
-  --color-focus: #78bd91;
+  background: linear-gradient(135deg, #ffffff 0%, #fff8f0 55%, #fff1df 100%);
+  --color-text: #292524;
+  --color-text-muted: #78716c;
+  --color-green-bright: #d97706;
+  --color-bg-card: #ffffff;
+  --color-border: #f5d5ab;
+  --color-focus: #d97706;
+  --shadow-sm: 0 8px 28px rgba(180, 100, 20, 0.08);
   color: var(--color-text);
-  min-height: 70vh;
   padding: 80px 48px;
   position: relative;
   overflow: hidden;
 }
 
-.page::after {
-  content: "🌿";
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 280px;
-  opacity: 0.04;
-  pointer-events: none;
+/* Match the layout theme's specificity, scoped to the contact page. */
+:global(main):has(> .page.page) {
+  background: #ffffff;
 }
 
 .content {
+  width: 100%;
+  min-width: 0;
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
@@ -69,53 +65,56 @@
 }
 
 .telegram {
-  background: linear-gradient(135deg, #28734b, #22543d);
+  background: #f59e0b;
   color: var(--color-text);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.2);
 }
 
 .telegram:hover {
-  background: #22543d;
+  background: #ea8a00;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(40, 115, 75, 0.24);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+}
+
+.telegram:active {
+  background: #d97706;
 }
 
 .whatsapp {
-  background: #f6fbf7;
+  background: #fff8f0;
   border: 1px solid var(--color-border);
-  color: #173d2b;
+  color: var(--color-text);
 }
 
 .whatsapp:hover {
-  background: #b9dec5;
+  background: #fff1df;
   transform: translateY(-2px);
+}
+
+.whatsapp:active {
+  background: #ffcc80;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  /* gap: 15px; */
+  gap: 24px;
 }
 
 .contactBlock {
   min-width: 0;
-  padding: 24px;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  background: var(--color-bg-card);
-  box-shadow: var(--shadow-sm);
+  line-height: 1.5;
 }
 
 .contactBlock h2 {
-  font-size: 13px;
+  font-size: 45px;
   color: var(--color-text);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   margin-bottom: 8px;
   font-weight: 500;
 }
 
 .contactBlock a {
-  font-size: clamp(22px, 3vw, 32px);
+  font-size: 30px;
   font-weight: 600;
   color: var(--color-green-bright);
   overflow-wrap: anywhere;
@@ -123,7 +122,8 @@
 }
 
 .contactBlock a:hover {
-  color: var(--color-text);
+  color: #b45309;
+  text-decoration: underline;
 }
 
 
@@ -147,6 +147,12 @@
 .page a:focus-visible {
   outline: 2px solid var(--color-green-bright);
   outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .messengers a {
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
