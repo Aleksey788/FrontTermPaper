@@ -7,7 +7,7 @@ export default function Home() {
       <section className={styles.hero}>
         <figure className={styles.heroQuote}>
           <blockquote className={styles.quote}>«Я просто сгубил себя!»</blockquote>
-          <figcaption>— Ф. М. Достоевский</figcaption>
+          <figcaption>— Ф. М. Достоевский </figcaption>
         </figure>
 
         <div className={styles.heroContent}>

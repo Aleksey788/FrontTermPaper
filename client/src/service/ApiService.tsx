@@ -13,7 +13,8 @@ apiClient.interceptors.response.use(
   (response) => {
     return response;
   },
-  (error) => {
+  (error) => { 
+    
 
     if (error.response) {
       // Сервер ответил с кодом ошибки (4xx, 5xx)
