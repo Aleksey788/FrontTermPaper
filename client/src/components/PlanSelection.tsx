@@ -23,7 +23,7 @@ export default function PlanSelection({ slug, days, cardBackgrounds }: PlanSelec
             >
               <div className={styles.titleDiv}>
                 <h2 className={styles.title}>
-                  {plan.countDay === "Individual" ? "Индивидуал" : `${plan.countDay} дней`}
+                  {plan.countDay === "Individual" ? "Индивидуальный" : `${plan.countDay} дней`}
                 </h2>
               </div>
             </Link>

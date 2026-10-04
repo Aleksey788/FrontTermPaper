@@ -1,0 +1,109 @@
+.session {
+  position: relative;
+  align-self: center;
+}
+
+.loading {
+  display: block;
+  width: 96px;
+  height: 38px;
+}
+
+.trigger {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: #000000;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  background: #fff3e0;
+}
+
+.arrow {
+  color: #d97706;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 260px;
+  max-width: calc(100vw - 48px);
+  border: 1px solid #f5d5ab;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  color: #292524;
+  box-shadow: 0 8px 28px rgba(180, 100, 20, 0.15);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.identity {
+  padding: 16px;
+  color: #78716c;
+}
+
+.identity .email {
+  margin-top: 4px;
+  color: #292524;
+}
+
+.logout {
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  border-top: 1px solid #f5d5ab;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  background: transparent;
+  color: #292524;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logout:hover:not(:disabled) {
+  background: #fff3e0;
+}
+
+.logout:active:not(:disabled) {
+  background: #fff1df;
+}
+
+.logout:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  padding: 12px 16px;
+  color: #9a3412;
+}
+
+.session :is(button, .login):focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .session {
+    position: static;
+  }
+
+  .dropdown {
+    top: calc(100% + 4px);
+    right: 24px;
+    left: 24px;
+    width: auto;
+    max-width: none;
+  }
+}

@@ -2,6 +2,17 @@
   width: calc(100% - 32px);
   min-width: 0;
   overflow: hidden;
+  --color-green: #f59e0b;
+  --color-green-light: #f59e0b;
+  --color-green-bright: #d97706;
+}
+
+.card .panel button:hover:not(:disabled) {
+  background: #ea8a00;
+}
+
+.card .panel button:active:not(:disabled) {
+  background: #d97706;
 }
 
 .tabs {

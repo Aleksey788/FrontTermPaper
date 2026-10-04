@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { apiService } from "@/service/ApiService";
 import styles from "./AuthForm.module.css";
 
@@ -9,6 +10,7 @@ type Mode = "login" | "signup";
 type Step = "form" | "code";
 
 export default function AuthForm({ initialMode }: { initialMode: Mode }) {
+  const router = useRouter();
   const [mode, setMode] = useState<Mode>(initialMode);
   const [registrationEmail, setRegistrationEmail] = useState("");
   const [registrationPassword, setRegistrationPassword] = useState("");
@@ -66,11 +68,13 @@ export default function AuthForm({ initialMode }: { initialMode: Mode }) {
         localStorage.setItem("userId", String(response.data.userId));
       }
 
+      window.dispatchEvent(new Event("session-changed"));
       alert(response.data.message ?? "Авторизация успешна!");
       setStep("form");
       setEmail("");
       setPassword("");
       setCode("");
+      router.replace("/");
     } catch (error) {
       showError(error);
     } finally {

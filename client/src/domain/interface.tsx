@@ -12,6 +12,9 @@ export interface DayContent {
   planDayId: number;
   check: boolean;
   canCheck: boolean;
+  lockReason?: string | null;
+  startedAt?: string | null;
+  availableAt?: string | null;
 }
 
 export type Plan7 = DayContent;

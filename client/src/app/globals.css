@@ -56,17 +56,8 @@ main {
   flex: 1;
 }
 
-/* Opt-in sizing for contacts and the habits section, including plan pages. */
-body:has(> main > .viewportPage) {
-  min-height: 100vh;
-  min-height: 100dvh;
-}
-
-body:has(> main > .viewportPage) > :is(header, footer) {
-  flex-shrink: 0;
-}
-
-body > main:has(> .viewportPage) {
+/* Stretch contacts and habits content within the header/main shell. */
+main:has(> .viewportPage) {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;

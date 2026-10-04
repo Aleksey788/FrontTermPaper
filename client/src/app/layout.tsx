@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import styles from "./layout.module.css";
+import HeaderSession from "@/components/HeaderSession";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <div className={styles.pageShell}>
         <header className={styles.header}>
           <Link href="/" className={styles.logo}>
             <img src="/logo-door.svg" alt="Logo" width={90} height={90}/>
@@ -43,16 +45,15 @@ export default function RootLayout({
             <Link href="/contact" className={styles.navLink}>
              Контакты
             </Link>
-            <Link href="/login" className={styles.navLink}>
-             Вход
-            </Link>
             <Link href="/habits" className={styles.navLink}>
              Привычки
             </Link>
+            <HeaderSession loginClassName={styles.navLink} />
           </nav>
         </header>
 
         <main className={styles.main}>{children}</main>
+        </div>
 
         <footer className={styles.footer}>
           <div className={styles.footerInner}>

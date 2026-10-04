@@ -1,10 +1,13 @@
 "use client";
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { DayContent, Habit, PlanDay } from "@/domain/interface";
 import { getDayNumbers, selectHabitAndPlan } from "@/domain/planSelection";
 import { apiService } from "@/service/ApiService";
+import AuthRequiredDialog from "./AuthRequiredDialog";
+import PlanDayCard from "./PlanDayCard";
+import styles from "./PlanDetails.module.css";
 
 type PlanState =
   | { kind: "loading" }
@@ -18,36 +21,16 @@ type PlanState =
       daysError: string | null;
     };
 
-interface ReviewClasses {
-  overlay: string;
-  modal: string;
-  stars: string;
-  star: string;
-  activeStar: string;
-  buttons: string;
-}
-
 interface PlanDetailsProps {
   habitSlug: string;
   duration: string;
   title: string;
-  daysClassName: string;
-  dayClassName: string;
-  reviewClasses?: ReviewClasses;
 }
 
 interface StartPlanResponse {
   message: string;
   id: number;
   startDate: string;
-}
-
-function getUserId(): number | null {
-  const stored = localStorage.getItem("userId");
-  if (stored === null) return null;
-
-  const id = Number(stored);
-  return Number.isSafeInteger(id) && id > 0 ? id : null;
 }
 
 function getRequestError(error: unknown): string {
@@ -63,21 +46,23 @@ export default function PlanDetails({
   habitSlug,
   duration,
   title,
-  daysClassName,
-  dayClassName,
-  reviewClasses,
 }: PlanDetailsProps) {
   const [state, setState] = useState<PlanState>({ kind: "loading" });
   const [reloadVersion, setReloadVersion] = useState(0);
   const [starting, setStarting] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
   const [startMessage, setStartMessage] = useState<string | null>(null);
   const [startError, setStartError] = useState<string | null>(null);
-  const [checkedDays, setCheckedDays] = useState<Record<number, boolean>>({});
+  const [savingDayId, setSavingDayId] = useState<number | null>(null);
+  const [dayErrors, setDayErrors] = useState<Record<number, string>>({});
   const [selectedDay, setSelectedDay] = useState<DayContent | null>(null);
   const [review, setReview] = useState({ stars: 5, comment: "" });
+  const progressRequestVersion = useRef(0);
 
   useEffect(() => {
     let cancelled = false;
+    const requestVersion = ++progressRequestVersion.current;
+    const outdated = () => cancelled || requestVersion !== progressRequestVersion.current;
 
     async function loadPlan() {
       try {
@@ -85,7 +70,7 @@ export default function PlanDetails({
           apiService.apiClient.get<Habit[]>("/habits"),
           apiService.apiClient.get<PlanDay[]>("/planDay"),
         ]);
-        if (cancelled) return;
+        if (outdated()) return;
 
         if (!Array.isArray(habitsResponse.data) || !Array.isArray(plansResponse.data)) {
           throw new Error("API вернул неверный формат каталога планов");
@@ -105,13 +90,11 @@ export default function PlanDetails({
           return;
         }
 
-        const userId = getUserId();
         try {
           const daysResponse = await apiService.apiClient.get<DayContent[]>(
             `/habits/${habit.slug}/plan/plan${plan.countDay}`,
-            { params: userId === null ? {} : { userId } },
           );
-          if (cancelled) return;
+          if (outdated()) return;
           if (!Array.isArray(daysResponse.data)) {
             throw new Error("API вернул неверный формат списка дней");
           }
@@ -123,7 +106,7 @@ export default function PlanDetails({
             daysError: null,
           });
         } catch (error) {
-          if (!cancelled) {
+          if (!outdated()) {
             setState({
               kind: "ready",
               habit,
@@ -134,7 +117,7 @@ export default function PlanDetails({
           }
         }
       } catch (error) {
-        if (!cancelled) {
+        if (!outdated()) {
           setState({ kind: "error", message: getRequestError(error) });
         }
       }
@@ -146,25 +129,73 @@ export default function PlanDetails({
     };
   }, [habitSlug, duration, reloadVersion]);
 
-  async function handleStartPlan() {
-    if (state.kind !== "ready") return;
-
-    const userId = getUserId();
-    if (userId === null) {
-      setStartError("Для начала плана войдите в аккаунт.");
-      return;
+  useEffect(() => {
+    function refresh() {
+      if (!document.hidden) setReloadVersion((version) => version + 1);
     }
+    // Recheck server availability when returning to the tab; no client-side unlock timer.
+    window.addEventListener("focus", refresh);
+    window.addEventListener("session-changed", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      window.removeEventListener("focus", refresh);
+      window.removeEventListener("session-changed", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, []);
+
+  async function handleCompleteDay(dayId: number, checked: boolean) {
+    if (state.kind !== "ready" || savingDayId !== null || !checked) return;
+    const day = state.days.find((item) => item.id === dayId);
+    if (!day || !day.canCheck || day.check) return;
+    ++progressRequestVersion.current;
+    setSavingDayId(dayId);
+    setDayErrors((previous) => ({ ...previous, [dayId]: "" }));
+    try {
+      const response = await apiService.apiClient.post<DayContent[]>(`/planDays/${dayId}/complete`, {}, {
+        validateStatus: (status: number) => status === 401 || (status >= 200 && status < 300),
+      });
+      if (response.status === 401) {
+        setAuthDialogOpen(true);
+        setReloadVersion((version) => version + 1);
+        return;
+      }
+      if (!Array.isArray(response.data)) throw new Error("API вернул неверный формат списка дней");
+      ++progressRequestVersion.current;
+      setState((previous) => previous.kind === "ready" && previous.habit.id === state.habit.id && previous.plan.id === state.plan.id
+        ? { ...previous, days: response.data, daysError: null } : previous);
+    } catch (error) {
+      setDayErrors((previous) => ({ ...previous, [dayId]: `Не удалось сохранить выполнение: ${getRequestError(error)}` }));
+    } finally {
+      setSavingDayId(null);
+    }
+  }
+
+  async function handleStartPlan() {
+    if (state.kind !== "ready" || starting) return;
 
     setStarting(true);
     setStartError(null);
     setStartMessage(null);
     try {
+      // Handle 401 here so the shared interceptor does not redirect before the dialog opens.
+      const authRequest = { validateStatus: (status: number) => status === 401 || (status >= 200 && status < 300) };
+      const currentUser = await apiService.apiClient.get<{ userId: number }>("/me", authRequest);
+      if (currentUser.status === 401) {
+        setAuthDialogOpen(true);
+        return;
+      }
+
       const response = await apiService.apiClient.post<StartPlanResponse>("/startPlan", {
-        userId,
+        userId: currentUser.data.userId,
         habitNameId: state.habit.id,
         planDayId: state.plan.id,
         startDate: new Date().toISOString(),
-      });
+      }, authRequest);
+      if (response.status === 401) {
+        setAuthDialogOpen(true);
+        return;
+      }
       setStartMessage(response.data.message);
       setReloadVersion((version) => version + 1);
     } catch (error) {
@@ -192,7 +223,7 @@ export default function PlanDetails({
         <>
           <p>План на {state.plan.countDay} дней</p>
           {!validDayCount && <p role="alert">У плана неверная длительность: {state.plan.countDay}</p>}
-          <button type="button" onClick={handleStartPlan} disabled={starting || !validDayCount}>
+          <button className={styles.startPlanButton} type="button" onClick={handleStartPlan} disabled={starting || !validDayCount}>
             {starting ? "Запуск плана..." : "Начать план"}
           </button>
           {startMessage && <p role="status">{startMessage}</p>}
@@ -204,59 +235,37 @@ export default function PlanDetails({
             <p>Задания для этого плана ещё не добавлены.</p>
           ) : null}
 
-          <section className={daysClassName} aria-label="Дни плана">
+          <section className={styles.days} aria-label="Дни плана">
             {dayNumbers.map((number) => {
               const day = daysByNumber.get(number);
               return (
-                <article key={number} className={dayClassName}>
-                  <h2>День {number}</h2>
-                  {day ? (
-                    <>
-                      <details>
-                        <summary>Подробнее</summary>
-                        <p>{day.description}</p>
-                      </details>
-                      <input
-                        type="checkbox"
-                        id={`agree-${day.id}`}
-                        disabled={!day.canCheck}
-                        checked={checkedDays[day.id] ?? day.check}
-                        onChange={(event) =>
-                          setCheckedDays((previous) => ({
-                            ...previous,
-                            [day.id]: event.target.checked,
-                          }))
-                        }
-                      />
-                      <label htmlFor={`agree-${day.id}`}>
-                        Выполнил(а) задание{!day.canCheck && " (ещё недоступно)"}
-                      </label>
-                      {reviewClasses && checkedDays[day.id] && (
-                        <button type="button" onClick={() => setSelectedDay(day)}>
-                          Оставить отзыв
-                        </button>
-                      )}
-                    </>
-                  ) : (
-                    <p>{state.daysError ? "Содержимое дня недоступно." : "Содержимое дня ещё не добавлено."}</p>
-                  )}
-                </article>
+                <PlanDayCard
+                  key={number}
+                  number={number}
+                  day={day}
+                  checked={day?.check ?? false}
+                  daysError={Boolean(state.daysError)}
+                  saving={day !== undefined && savingDayId === day.id}
+                  error={day ? dayErrors[day.id] : undefined}
+                  onCheck={handleCompleteDay}
+                  onReview={setSelectedDay}
+                />
               );
             })}
           </section>
         </>
       )}
 
-      {reviewClasses && selectedDay && (
-        <div className={reviewClasses.overlay}>
-          <div className={`reviewModal ${reviewClasses.modal}`}>
+      {selectedDay && (
+        <div className={styles.overlay}>
+          <div className={`reviewModal ${styles.modal}`}>
             <h2>Отзыв за {selectedDay.number} день</h2>
             <label>Количество звёзд</label>
-            <div className={reviewClasses.stars}>
+            <div className={styles.stars}>
               {[1, 2, 3, 4, 5].map((star) => (
                 <span
                   key={star}
-                  className={review.stars >= star ? reviewClasses.activeStar : reviewClasses.star}
+                  className={review.stars >= star ? styles.activeStar : styles.star}
                   onClick={() => setReview((previous) => ({ ...previous, stars: star }))}
                 >
                   ★
@@ -269,11 +278,18 @@ export default function PlanDetails({
               value={review.comment}
               onChange={(event) => setReview((previous) => ({ ...previous, comment: event.target.value }))}
             />
-            <div className={reviewClasses.buttons}>
+            <div className={styles.buttons}>
               <button
                 type="button"
                 onClick={() => {
-                  console.log({ day: selectedDay.number, stars: review.stars, comment: review.comment });
+                  console.log({
+                    dayId: selectedDay.id,
+                    day: selectedDay.number,
+                    habitNameId: selectedDay.habitNameId,
+                    planDayId: selectedDay.planDayId,
+                    stars: review.stars,
+                    comment: review.comment,
+                  });
                   setSelectedDay(null);
                   setReview({ stars: 5, comment: "" });
                 }}
@@ -293,6 +309,7 @@ export default function PlanDetails({
           </div>
         </div>
       )}
+      {authDialogOpen && <AuthRequiredDialog onClose={() => setAuthDialogOpen(false)} />}
     </div>
   );
 }

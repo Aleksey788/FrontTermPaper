@@ -15,13 +15,13 @@
   }
 }
 
-:global(main):has(> .page) + :global(footer) {
+:global(div):has(> :global(main) > .page) + :global(footer) {
   position: relative;
   border-top-color: transparent;
   padding: 50px 48px 16px;
 }
 
-:global(main):has(> .page) + :global(footer)::before {
+:global(div):has(> :global(main) > .page) + :global(footer)::before {
   content: "";
   position: absolute;
   inset: -33px 0 auto;
