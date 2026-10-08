@@ -133,8 +133,7 @@
   --color-text-muted: #b9dec5;
   --color-green-bright: #78bd91;
   --color-border: #34865a;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
   padding: 16px 48px;
   background: white;
@@ -150,7 +149,7 @@
 .logo {
   display: flex;
   align-items: center;
-  /* justify-self: start; */
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -172,14 +171,29 @@
 
 .nav {
   display: flex;
-  gap: 8px;
-  justify-self: center;
+  flex: 1;
+  gap: 200px;
+
 
   .navLink
   {
     font-size: 14px;
     color: black;
   }
+}
+
+.navLinks {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.navSession {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
 }
 
 .nav a {
@@ -283,19 +297,20 @@
 
 @media (max-width: 768px) {
   .header {
-    grid-template-columns: 1fr;
+    flex-wrap: wrap;
     gap: 16px;
     padding: 16px 24px;
   }
 
-  .logo {
-    justify-self: center;
+  .nav {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
-  .nav {
-    justify-self: center;
+  .navLinks {
+    flex-basis: 240px;
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   .footerInner {

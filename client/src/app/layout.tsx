@@ -39,16 +39,21 @@ export default function RootLayout({
           </Link>
 
           <nav className={styles.nav}>
-            <Link href="/" className={styles.navLink}>
-             Главная
-            </Link>
-            <Link href="/contact" className={styles.navLink}>
-             Контакты
-            </Link>
-            <Link href="/habits" className={styles.navLink}>
-             Привычки
-            </Link>
-            <HeaderSession loginClassName={styles.navLink} />
+            <div className={styles.navLinks}>
+                <Link href="/" className={styles.navLink}>
+                Главная
+                </Link>
+                <Link href="/contact" className={styles.navLink}>
+                Контакты
+                </Link>
+                <Link href="/habits" className={styles.navLink}>
+                Привычки
+                </Link>
+            </div>
+
+            <div className={styles.navSession}>
+                <HeaderSession loginClassName={styles.navLink} />
+            </div>
           </nav>
         </header>
 
